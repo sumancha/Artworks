@@ -1,0 +1,120 @@
+ <!-- <div style="width:60%">
+    <h3>Artworks grid</h3>
+    <div *ngIf="artworkList">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Art Details</th>
+                <th scope="col">Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let arts of artworkList">
+                <td>
+                    {{arts.title}} 
+
+                </td>
+                
+                <td>
+                    
+                    <img style="height:80px;width:100px;" [src]="imageBaseUrl+arts.productImage">
+                </td>
+               
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div> -->
+
+
+<!-- <p >artworks-list works!</p> -->
+<!-- <div *ngFor="Let art of artworkList">{{art.Id}}</div> -->
+ <!-- <p *ngFor="let medium of mediumList">{{ medium.mediumType}}</p>
+
+  <p *ngFor="let artdetail of artworkList">{{ artdetail.artDetails}}</p>
+
+ <button (click)="fetchData()">Fetch Data</button> -->
+ 
+    <!-- <div class="card">
+    <p-dataview #dv [value]="artworkList"  [paginator]="true" [rows]="6" [totalRecords]="artworkList?.length"
+    [rowsPerPageOptions]="[6,12,18]" [lazy]="false">
+     
+        <ng-template pTemplate="list" let-items>
+            <div class="grid grid-cols-12 gap-4 grid-nogutter">
+                <div   *ngFor="let item of items; let first = first"  >
+                    <div
+                   class="flex flex-col sm:flex-row sm:items-center p-6 gap-4"
+                    [ngClass]="{ 'border-t border-surface-200 dark:border-surface-700': !first }"
+                    > -->
+
+               <!-- #######     here -->
+
+               
+<p-dataview [value]="artworkList" [rows]="5" [paginator]="true">
+    <ng-template #list let-items>
+        <div class="grid grid-cols-12 gap-4 grid-nogutter">
+            <div class="col-span-12" *ngFor="let item of items; let first = first" class="col-span-12">
+                <div
+                    class="flex flex-col sm:flex-row sm:items-center p-6 gap-4"
+                    [ngClass]="{ 'border-t border-surface-200 dark:border-surface-700': !first }"
+                >
+                        <div class="md:w-40 relative">
+                            <img 
+                       class="block  xl:block mx-auto rounded-border   myimagesize"
+
+                                [src]="imageBaseUrl + item.fileName"
+                                [alt]="item.fileName"
+                                    style="max-width: 300px; max-height: 300px;"
+                            />
+                            <p-tag
+                                [value]="getDetail(item)"
+                                [severity]="getSeverity(item)"
+                                class="absolute"
+                                styleClass="dark:!bg-surface-900 opacity-50"
+                                [style.left.px]="20"
+                                [style.top.px]="20"
+                                
+                            />
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between md:items-center flex-1 gap-6">
+                            <div class="flex flex-row md:flex-col justify-between items-start gap-2">
+                                <div>
+                                                                        <div class="text-lg font-medium mt-2">{{ item.title }}</div>
+                                    <span class="font-medium text-surface-500 dark:text-surface-400 text-sm">{{ item.artDetails}}</span>
+                  
+                                </div>
+                             <div class="bg-surface-100 p-1" style="border-radius: 30px">
+                                    <div
+                                    class="bg-surface-0 flex items-center gap-2 justify-center py-1 px-2"
+                                    style="border-radius: 30px; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.04), 0px 1px 2px 0px rgba(0, 0, 0, 0.06)"
+                                    >
+                                        <span class="text-surface-900 font-medium text-sm">{{
+                                            item.medium.mediumType
+                                        }}</span>
+                                                          <span class="font-medium text-surface-500 dark:text-surface-400 text-sm">{{ item.createdDate | date:'short'}}</span>
+                                          <i class="pi pi-star-fill text-yellow-500"></i>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:items-end gap-8">
+                                <span class="text-xl font-semibold">{{
+                                    '$' + item.price
+                                }}</span>
+                                <div class="flex flex-row-reverse md:flex-row gap-2">
+                                    <p-button icon="pi pi-heart" [outlined]="true" />
+                                    <p-button
+                                        icon="pi pi-shopping-cart"
+                                        class="flex-auto md:flex-initial whitespace-nowrap"
+                                        label="Buy Now"
+                                        [disabled]="item.sold"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </ng-template>         
+    </p-dataview>
+<!-- </div>     -->

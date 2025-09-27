@@ -40,3 +40,16 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Ignore all log files
+*.log
+
+# Ignore the 'temp' directory
+temp/
+
+# Ignore a specific file
+my_secret_file.txt
+
+# Ignore all .txt files except important.txt
+*.txt
+!important.txt

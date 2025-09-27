@@ -1,0 +1,82 @@
+<div class="content">
+  <h1 class="header">
+    Add Artwork details
+  </h1>
+  <form [formGroup]="addArtFormgrp">
+    <section>
+      <nav>Art Info</nav>
+      <div>
+        <input formGroupName="title"  placeholder="Art Title" />
+        <!-- @if( title?.errors?.['required'] && title?.invalid ){<em> Please enter title</em>} -->
+
+        <textarea style="width: 500px;" formGroupName="artDatail" rows="5" placeholder="Art Details"  ></textarea>
+            <!-- @if( artDatail?.touched && artDatail?.invalid ){<em> Detail must be less than 500 char</em>}
+        @if( artDatail?.errors?.['required'] && artDatail?.invalid ){<em> Please enter Details</em>} -->
+        <select style="width: 500px;" formGroupName="medium" placeholder="Mediums" >
+          <option value="" disabled selected>Select Medium</option>
+          <option *ngFor="let medium of mediums" [value]="medium.id">{{medium.mediumType}}</option>
+        </select>
+         <label for="createdDate" class="form-label">Created Date</label>
+        <input formGroupName="createdDate" type="date" placeholder="Created Date" />
+
+      </div>
+    </section>
+    <section>
+      <nav>Image</nav>
+      <div>
+               <input formGroupName="imageFile" type="file" (change)="onChange($event)" >
+      </div>
+    </section>
+        <section>
+      <nav>Purchase Details</nav>
+      <div>
+                 <label for="sold" class="form-label">Art Available for Purchase?</label>
+          <div class="radio">
+          <input type="radio" formControlName="sold" value="true"> Sold
+          <input type="radio" formControlName="sold" value="false"> Available for Purchase
+            <!-- @if( title?.errors?.['required'] && title?.invalid ){<em> Please Select a value</em>} -->
+          </div>
+        <!-- <input formGroupName="sold" placeholder="Sold" /> -->
+         <input *ngIf="addArtFormgrp.controls[('sold')].value==true" formGroupName="soldDate" placeholder="Sold Date" />
+           <input *ngIf="addArtFormgrp.controls[('sold')].value==false" formGroupName="price" placeholder="Price" />
+      </div>
+    </section>
+    <!-- <section>
+      <nav>Phone</nav>
+      <div class="flex-column">
+        <div class="flex-group">
+          <input placeholder="Phone" />
+          <img src="/assets/plus-grey-blue.png" class="add" />
+        </div>
+        <div class="radio">
+          <input type="radio" value="mobile"> Mobile
+          <input type="radio" value="work"> Work
+          <input type="radio" value="other"> Other
+        </div>
+      </div>
+    </section>
+    <section>
+      <nav>Address</nav>
+      <div>
+        <div class="address">
+          <div class="flex-group">
+            <input placeholder="Address" />
+            <img src="/assets/plus-grey-blue.png" class="add" />
+          </div>
+          <input placeholder="City" />
+          <input placeholder="State/Region" />
+          <input placeholder="Zip/Postal Code" />
+          <select>
+            <option value="home">Home</option>
+            <option value="work">Work</option>
+            <option value="mobile">Other</option>
+          </select>
+        </div>
+      </div>
+    </section> -->
+  </form>
+  <div class="buttons">
+    <button class="secondary">Cancel</button>
+    <button class="primary" (click)="saveArtWork()">Save</button>
+  </div>
+</div>
