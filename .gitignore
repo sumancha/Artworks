@@ -11,9 +11,12 @@
 sumanarts/sumanarts-ui/node_modules
 sumanarts/sumanarts-ui/.angular
 sumanarts/sumanarts-ui/dist
+/CopilotIndices
 npm-debug.log
 yarn-error.log
 
+c#
+sumanarts/API/ImageManipulation/ImageManipulation.API/bin
 # IDEs and editors
 .idea/
 .project
