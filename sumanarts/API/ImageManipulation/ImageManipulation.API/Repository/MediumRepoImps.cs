@@ -1,5 +1,6 @@
 ﻿using ArtImageManipulation.API;
 using ArtImageManipulation.API.Entity;
+using ImageManipulation.API.DTO;
 using Microsoft.EntityFrameworkCore;
 
 namespace ImageManipulation.API.Repository
@@ -13,9 +14,13 @@ namespace ImageManipulation.API.Repository
             this.context = context;
         }
 
-        public Task<Medium> AddMediumAsync(Medium Medium)
+        public async Task<Medium> AddMediumAsync(Medium medium)
         {
-            throw new NotImplementedException();
+            context.Mediums.Add(medium);
+            await context.SaveChangesAsync();
+            return medium;
+
+
         }
 
         public Task<Medium> DeleteMediumAsync(int Id)

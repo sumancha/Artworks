@@ -2,22 +2,22 @@
   <h1 class="header">
     Add Artwork details
   </h1>
-  <form [formGroup]="addArtFormgrp">
+  <form [formGroup]="addArtFormgrp" (ngSubmit)="saveArtWork($event)">
     <section>
       <nav>Art Info</nav>
       <div>
-        <input formGroupName="title"  placeholder="Art Title" />
-        <!-- @if( title?.errors?.['required'] && title?.invalid ){<em> Please enter title</em>} -->
+        <input formControlName="title"  placeholder="Art Title" />
+        @if( title?.errors?.['required'] && title?.invalid && sold?.touched){<em> Please enter title</em>}
 
-        <textarea style="width: 500px;" formGroupName="artDatail" rows="5" placeholder="Art Details"  ></textarea>
-            <!-- @if( artDatail?.touched && artDatail?.invalid ){<em> Detail must be less than 500 char</em>}
-        @if( artDatail?.errors?.['required'] && artDatail?.invalid ){<em> Please enter Details</em>} -->
-        <select style="width: 500px;" formGroupName="medium" placeholder="Mediums" >
-          <option value="" disabled selected>Select Medium</option>
+        <input   formControlName="artDatails"  placeholder="Art Details" />  
+            @if( artDatails?.touched && artDatails?.invalid ){<em> Detail must be less than 500 char</em>}
+        @if( artDatails?.errors?.['required'] && artDatails?.invalid && sold?.touched ){<em> Please enter Details</em>}
+        <select style="width: 500px;" formControlName="mediumId" >
+          <option value="" disabled selected >Select Medium</option>
           <option *ngFor="let medium of mediums" [value]="medium.id">{{medium.mediumType}}</option>
         </select>
          <label for="createdDate" class="form-label">Created Date</label>
-        <input formGroupName="createdDate" type="date" placeholder="Created Date" />
+        <input formControlName="createdDate" type="date" placeholder="Created Date" />
 
       </div>
     </section>
@@ -34,11 +34,13 @@
           <div class="radio">
           <input type="radio" formControlName="sold" value="true"> Sold
           <input type="radio" formControlName="sold" value="false"> Available for Purchase
-            <!-- @if( title?.errors?.['required'] && title?.invalid ){<em> Please Select a value</em>} -->
+            @if( sold?.errors?.['required'] && sold?.invalid && sold?.touched){<em> Please Select a value</em>}
           </div>
         <!-- <input formGroupName="sold" placeholder="Sold" /> -->
-         <input *ngIf="addArtFormgrp.controls[('sold')].value==true" formGroupName="soldDate" placeholder="Sold Date" />
-           <input *ngIf="addArtFormgrp.controls[('sold')].value==false" formGroupName="price" placeholder="Price" />
+         <input 
+              formControlName="soldDate"  type="date" placeholder="Sold Date" />
+           <input  formControlName="price" placeholder="Price" />
+            @if( sold?.errors?.['required'] && sold?.invalid && sold?.touched){<em> Please Select a value</em>}
       </div>
     </section>
     <!-- <section>
@@ -74,9 +76,10 @@
         </div>
       </div>
     </section> -->
-  </form>
-  <div class="buttons">
-    <button class="secondary">Cancel</button>
-    <button class="primary" (click)="saveArtWork()">Save</button>
+      <div class="buttons">
+    <button type="reset" class="secondary">Cancel</button>
+    <button type="submit" class="primary"  >Save</button>
   </div>
+  </form>
+
 </div>

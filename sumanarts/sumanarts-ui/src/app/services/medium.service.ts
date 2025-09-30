@@ -16,4 +16,11 @@ return this.http.get<Medium[]>(this.baseurl+'/api/medium');
 
 
   }
+
+  AddMedium(data:any):Observable<Medium>{
+ const headers = {headers:{ 'content-type': 'application/json'}};
+     var returnval =  this.http.post<Medium>(this.baseurl+'/api/medium',data, headers);
+     console.log("returnval",returnval);
+     return returnval;
+  }
 }

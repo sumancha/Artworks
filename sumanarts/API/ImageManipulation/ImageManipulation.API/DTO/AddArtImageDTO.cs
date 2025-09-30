@@ -9,11 +9,11 @@ namespace ArtImageManipulation.API.DTO
 {
     public class AddArtImageDTO
     {
-        [Required]
-        [MaxLength(120)]
+        //[Required]
+        //[MaxLength(120)]
         public string? Title { get; set; }
-        [Required]
-        [MaxLength(500)]
+        //[Required]
+        //[MaxLength(500)]
         public string? ArtDetails { get; set; }
         //[Required]
         //[MaxLength(220)]
@@ -26,10 +26,10 @@ namespace ArtImageManipulation.API.DTO
 
         public IFormFile? ArtImageFile { get; set; }
 
-        [Required]
+        //[Required]
         public bool? sold { get; set; }
 
-        [Required]
+        //[Required]
         [Column(TypeName = "decimal(18,2)")]
         public decimal? price { get; set; }
         public DateTime? CreatedDate { get; set; }

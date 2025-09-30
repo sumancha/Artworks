@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\entity\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\entity\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\controllers\\artimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\controllers\\artimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +11,44 @@
       "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\dto\\addartimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\services\\fileservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\services\\fileservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\services\\fileservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\services\\fileservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\repository\\mediumrepoimps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\repository\\mediumrepoimps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\repository\\artimagerepoimps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\repository\\artimagerepoimps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\entity\\medium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\entity\\medium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\controllers\\mediumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\controllers\\mediumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\dto\\addmediumdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\dto\\addmediumdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\repository\\iartimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\repository\\iartimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\entity\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\entity\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\migrations\\20250922211910_updatecolumnagain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,16 +67,8 @@
       "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\dto\\artimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\controllers\\mediumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\controllers\\mediumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\entity\\artimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\entity\\artimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\repository\\mediumrepoimps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\repository\\mediumrepoimps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\imagemanipulation.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -63,24 +79,12 @@
       "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\entity\\medium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\entity\\medium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Migrations\\20250922203919_columnRename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ImageManipulation.API\\Migrations\\20250922203919_columnRename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Migrations\\20250922203239_updateEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ImageManipulation.API\\Migrations\\20250922203239_updateEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\repository\\iartimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|solutionrelative:imagemanipulation.api\\repository\\iartimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA3C41BA-BF59-4004-95DE-7560FE3C9222}|ImageManipulation.API\\ImageManipulation.API.csproj|c:\\users\\suman\\project\\sumanarts\\sumanarts\\api\\imagemanipulation\\imagemanipulation.api\\repository\\imediumrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,49 +105,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ArtImageController.cs",
-              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Controllers\\ArtImageController.cs",
-              "RelativeDocumentMoniker": "ImageManipulation.API\\Controllers\\ArtImageController.cs",
-              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Controllers\\ArtImageController.cs",
-              "RelativeToolTip": "ImageManipulation.API\\Controllers\\ArtImageController.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAowEMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T02:43:52.34Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Contact.cs",
-              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Entity\\Contact.cs",
-              "RelativeDocumentMoniker": "ImageManipulation.API\\Entity\\Contact.cs",
-              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Entity\\Contact.cs",
-              "RelativeToolTip": "ImageManipulation.API\\Entity\\Contact.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ArtImageController.cs",
+              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Controllers\\ArtImageController.cs",
+              "RelativeDocumentMoniker": "ImageManipulation.API\\Controllers\\ArtImageController.cs",
+              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Controllers\\ArtImageController.cs",
+              "RelativeToolTip": "ImageManipulation.API\\Controllers\\ArtImageController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAIAwwD8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T17:09:53.445Z",
+              "WhenOpened": "2025-09-19T02:43:52.34Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Program.cs",
-              "RelativeDocumentMoniker": "ImageManipulation.API\\Program.cs",
-              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Program.cs",
-              "RelativeToolTip": "ImageManipulation.API\\Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAC0AAAAeAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Medium.cs",
+              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Entity\\Medium.cs",
+              "RelativeDocumentMoniker": "ImageManipulation.API\\Entity\\Medium.cs",
+              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Entity\\Medium.cs",
+              "RelativeToolTip": "ImageManipulation.API\\Entity\\Medium.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T00:07:22.946Z"
+              "WhenOpened": "2025-09-18T23:42:33.731Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -153,9 +154,36 @@
               "RelativeDocumentMoniker": "ImageManipulation.API\\Services\\FileServices.cs",
               "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Services\\FileServices.cs",
               "RelativeToolTip": "ImageManipulation.API\\Services\\FileServices.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAkwCcAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAD4vw4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T00:03:40.999Z"
+              "WhenOpened": "2025-09-19T00:03:40.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Program.cs",
+              "RelativeDocumentMoniker": "ImageManipulation.API\\Program.cs",
+              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Program.cs",
+              "RelativeToolTip": "ImageManipulation.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T00:07:22.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ImageManipulation.API\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ImageManipulation.API\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T23:36:48.659Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -165,25 +193,92 @@
               "RelativeDocumentMoniker": "ImageManipulation.API\\Repository\\ArtImageRepoImps.cs",
               "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\ArtImageRepoImps.cs",
               "RelativeToolTip": "ImageManipulation.API\\Repository\\ArtImageRepoImps.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswCEAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T00:10:58.575Z"
+              "WhenOpened": "2025-09-19T00:10:58.575Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "MediumRepoImps.cs",
+              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\MediumRepoImps.cs",
+              "RelativeDocumentMoniker": "ImageManipulation.API\\Repository\\MediumRepoImps.cs",
+              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\MediumRepoImps.cs",
+              "RelativeToolTip": "ImageManipulation.API\\Repository\\MediumRepoImps.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T17:03:38.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AddArtImageDTO.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\DTO\\AddArtImageDTO.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\DTO\\AddArtImageDTO.cs",
               "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\DTO\\AddArtImageDTO.cs",
               "RelativeToolTip": "ImageManipulation.API\\DTO\\AddArtImageDTO.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwCIAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T00:12:57.041Z"
+              "WhenOpened": "2025-09-19T00:12:57.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MediumController.cs",
+              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Controllers\\MediumController.cs",
+              "RelativeDocumentMoniker": "ImageManipulation.API\\Controllers\\MediumController.cs",
+              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Controllers\\MediumController.cs",
+              "RelativeToolTip": "ImageManipulation.API\\Controllers\\MediumController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAuwCUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T21:39:05.15Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "AddMediumDTO.cs",
+              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\DTO\\AddMediumDTO.cs",
+              "RelativeDocumentMoniker": "ImageManipulation.API\\DTO\\AddMediumDTO.cs",
+              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\DTO\\AddMediumDTO.cs",
+              "RelativeToolTip": "ImageManipulation.API\\DTO\\AddMediumDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T18:09:20.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Entity\\Contact.cs",
+              "RelativeDocumentMoniker": "ImageManipulation.API\\Entity\\Contact.cs",
+              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Entity\\Contact.cs",
+              "RelativeToolTip": "ImageManipulation.API\\Entity\\Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T17:09:53.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IArtImageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\IArtImageRepository.cs",
+              "RelativeDocumentMoniker": "ImageManipulation.API\\Repository\\IArtImageRepository.cs",
+              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\IArtImageRepository.cs",
+              "RelativeToolTip": "ImageManipulation.API\\Repository\\IArtImageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T23:35:27.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "ArtImageDTO.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\DTO\\ArtImageDTO.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\DTO\\ArtImageDTO.cs",
@@ -195,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "20250922211910_updateColumnAgain.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Migrations\\20250922211910_updateColumnAgain.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\Migrations\\20250922211910_updateColumnAgain.cs",
@@ -207,19 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MediumController.cs",
-              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Controllers\\MediumController.cs",
-              "RelativeDocumentMoniker": "ImageManipulation.API\\Controllers\\MediumController.cs",
-              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Controllers\\MediumController.cs",
-              "RelativeToolTip": "ImageManipulation.API\\Controllers\\MediumController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T21:39:05.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "20250924022935_AddedTitle.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Migrations\\20250924022935_AddedTitle.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\Migrations\\20250924022935_AddedTitle.cs",
@@ -231,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "ArtImage.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Entity\\ArtImage.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\Entity\\ArtImage.cs",
@@ -243,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "UpdateArtImageDTO.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\DTO\\UpdateArtImageDTO.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\DTO\\UpdateArtImageDTO.cs",
@@ -255,19 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MediumRepoImps.cs",
-              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\MediumRepoImps.cs",
-              "RelativeDocumentMoniker": "ImageManipulation.API\\Repository\\MediumRepoImps.cs",
-              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\MediumRepoImps.cs",
-              "RelativeToolTip": "ImageManipulation.API\\Repository\\MediumRepoImps.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T17:03:38.858Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "ImageManipulation.API.csproj",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\ImageManipulation.API.csproj",
               "RelativeDocumentMoniker": "ImageManipulation.API\\ImageManipulation.API.csproj",
@@ -279,19 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Medium.cs",
-              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Entity\\Medium.cs",
-              "RelativeDocumentMoniker": "ImageManipulation.API\\Entity\\Medium.cs",
-              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Entity\\Medium.cs",
-              "RelativeToolTip": "ImageManipulation.API\\Entity\\Medium.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T23:42:33.731Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\appsettings.json",
               "RelativeDocumentMoniker": "ImageManipulation.API\\appsettings.json",
@@ -303,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "20250922214108_AddedCreatedDate.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Migrations\\20250922214108_AddedCreatedDate.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\Migrations\\20250922214108_AddedCreatedDate.cs",
@@ -315,19 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "ImageManipulation.API\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\ApplicationDbContext.cs",
-              "RelativeToolTip": "ImageManipulation.API\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA3wAoAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T23:36:48.659Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "20250922203919_columnRename.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Migrations\\20250922203919_columnRename.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\Migrations\\20250922203919_columnRename.cs",
@@ -339,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "20250922203239_updateEntity.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Migrations\\20250922203239_updateEntity.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\Migrations\\20250922203239_updateEntity.cs",
@@ -351,19 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IArtImageRepository.cs",
-              "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\IArtImageRepository.cs",
-              "RelativeDocumentMoniker": "ImageManipulation.API\\Repository\\IArtImageRepository.cs",
-              "ToolTip": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\IArtImageRepository.cs",
-              "RelativeToolTip": "ImageManipulation.API\\Repository\\IArtImageRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T23:35:27.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "IMediumrepository.cs",
               "DocumentMoniker": "C:\\Users\\suman\\Project\\sumanarts\\sumanarts\\API\\ImageManipulation\\ImageManipulation.API\\Repository\\IMediumrepository.cs",
               "RelativeDocumentMoniker": "ImageManipulation.API\\Repository\\IMediumrepository.cs",
@@ -375,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
@@ -383,14 +418,6 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.302\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-09-22T16:38:41.149Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

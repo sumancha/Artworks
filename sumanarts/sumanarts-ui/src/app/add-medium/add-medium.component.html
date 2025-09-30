@@ -1,0 +1,23 @@
+<p>add-medium works!</p>
+<div class="content">
+  <h1 class="header">
+    Add Medium
+  </h1>
+  <form [formGroup]="addMediumFormgrp" (ngSubmit)="saveMediumWork()">
+    <section>
+      <nav>Medium</nav>
+      <div>
+        <input formControlName="mediumType"  placeholder="Medium Type" />
+      
+
+    </div>
+    </section>
+
+ 
+      <div class="buttons">
+    <button type="reset" class="secondary">Cancel</button>
+    <button type="submit" class="primary"  >Save</button>
+  </div>
+  </form>
+
+</div>

@@ -36,9 +36,9 @@ ngOnInit(){
   // const addArtForm = new FormGroup({
     this.addArtFormgrp  = new FormGroup({
        title : new FormControl('',Validators.required),
-         artDatail : new FormControl('',[Validators.required, Validators.maxLength(500)]),
+         artDatails : new FormControl('',[Validators.required, Validators.maxLength(500)]),
             createdDate : new FormControl(),
-           medium : new FormControl(),
+           mediumId : new FormControl(),
              sold : new FormControl('',Validators.required),
                soldDate : new FormControl(), 
                 price : new FormControl('',Validators.required),
@@ -55,7 +55,7 @@ ngOnInit(){
 }
 get title(){ 
   return this.addArtFormgrp.get('title'); }
-get artDatail(){ return this.addArtFormgrp.get('artDatail'); }
+get artDatails(){ return this.addArtFormgrp.get('artDatails'); }
 get sold(){ return this.addArtFormgrp.get('sold'); }
 get price(){ return this.addArtFormgrp.get('price'); }
 
@@ -64,23 +64,31 @@ get price(){ return this.addArtFormgrp.get('price'); }
     }
 
 
-saveArtWork(){
-    //  this.status= {statusCode:0,message:'wait..'};
+saveArtWork(event:any){
+  console.log(this.addArtFormgrp.value);
+     this.status= {statusCode:0,message:'wait..'};
  
-      // const frmData:AddArtImage= Object.assign(this.addArtFormgrp.value);
-      // frmData.imageFile=this.imageFile;
-      // // we will call our service, and pass this object to it
-      // this.imageService['addart'](frmData).subscribe({
-      //   next:()=>{
-      //       // this.router.navigate(['/listart']);
+      const frmData :AddArtImage = Object.assign(this.addArtFormgrp.value);
+//       const eventMedium= this.addArtFormgrp.get('medium')?.value; 
+// frmData.mediumId= event.mediumId;
+
+
+      frmData.imageFile=this.imageFile;
+      // we will call our service, and pass this object to it
+      this.imageService.AddArt(frmData).subscribe({
+        next:(data:any)=>{
+            this.status= {statusCode:1,message:'Medium Added Successfully'};
+      console.log("Medium Added",data);
+      console.log("Medium Added",data);
+      this.router.navigate(['/listart']);
           
-      //   },
-      //   error: (err: any)=>{
-      //    this.status= {statusCode:0,message:'Error on server side'}
-      //     console.log(err);
-      //   }
-      // }
-    // )
+        },
+        error: (err: any)=>{
+         this.status= {statusCode:0,message:'Error on server side'}
+          console.log(err);
+        }
+      }
+    )
 
 
 }

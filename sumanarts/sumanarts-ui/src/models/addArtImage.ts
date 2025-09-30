@@ -9,8 +9,8 @@ export interface AddArtImage   {
     // artImageFile: file ;
     sold: boolean ;
     price: number ;
-    createdDate: Date | null ;
-    soldDate: Date | null ;
+    createdDate: string | null ;
+    soldDate: string | null ;
     mediumId: number;
 
     

@@ -18,6 +18,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 import { ArtworkAddComponent } from './artwork/artworks-add/artwork-add.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { Router, RouterModule } from '@angular/router';
+import { AddMediumComponent } from './add-medium/add-medium.component';
  
 
 @NgModule({
@@ -25,7 +26,8 @@ import { Router, RouterModule } from '@angular/router';
     AppComponent,
 ArtworkAddComponent,
 ArtworksListComponent,
-NavbarComponent
+NavbarComponent,
+AddMediumComponent
   ],
   imports: [
     BrowserModule,

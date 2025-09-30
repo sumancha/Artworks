@@ -61,6 +61,7 @@ namespace ImageManipulation.API.Controllers
 
         // POST api/<ArtImageController>
         [HttpPost]
+        [Consumes("multipart/form-data")]
         public async Task<IActionResult> CreateArtwork([FromForm] AddArtImageDTO AddArtImage)
         {
             try

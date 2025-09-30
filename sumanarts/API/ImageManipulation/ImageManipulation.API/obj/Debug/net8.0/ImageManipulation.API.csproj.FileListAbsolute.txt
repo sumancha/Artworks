@@ -169,3 +169,4 @@ C:\Users\suman\Project\sumanarts\sumanarts\API\ImageManipulation\ImageManipulati
 C:\Users\suman\Project\sumanarts\sumanarts\API\ImageManipulation\ImageManipulation.API\obj\Debug\net8.0\ImageManipulation.API.pdb
 C:\Users\suman\Project\sumanarts\sumanarts\API\ImageManipulation\ImageManipulation.API\obj\Debug\net8.0\ImageManipulation.API.genruntimeconfig.cache
 C:\Users\suman\Project\sumanarts\sumanarts\API\ImageManipulation\ImageManipulation.API\obj\Debug\net8.0\ref\ImageManipulation.API.dll
+C:\Users\suman\Project\sumanarts\sumanarts\API\ImageManipulation\ImageManipulation.API\obj\Debug\net8.0\ImageManipulation.API.sourcelink.json
