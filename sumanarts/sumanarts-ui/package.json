@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/core": "^20.3.10",
     "@angular/animations": "^19.2.15",
     "@angular/common": "^19.2.15",
     "@angular/compiler": "^19.2.15",
@@ -18,6 +19,8 @@
     "@angular/platform-browser": "^19.2.15",
     "@angular/platform-browser-dynamic": "^19.2.15",
     "@angular/router": "^19.2.15",
+    "@ngrx/store": "^19.2.1",
+    "@ngrx/store-devtools": "^19.2.1",
     "@primeng/themes": "^19.1.4",
     "@primeuix/themes": "^1.2.3",
     "bootstrap": "^5.3.3",

@@ -12,7 +12,11 @@ Debug/
 assets/
 Uploads/
 *.dll
-
+obj/
+/CopilotIndices
+CopiloteIndices/
+ImageManipulation/
+ .vs/
 # Node
 /node_modules
 sumanarts/sumanarts-ui/node_modules
@@ -40,6 +44,8 @@ sumanarts/API/ImageManipulation/ImageManipulation.API/bin
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+*.db
+*.suo
 
 # Miscellaneous
 /.angular/cache
@@ -66,4 +72,49 @@ my_secret_file.txt
 # Ignore all .txt files except important.txt
 *.txt
 !important.txt
+<<<<<<< Updated upstream
 *.vsidx
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/CodeChunks.db
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/CodeChunks.db-shm
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/CodeChunks.db-wal
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/SemanticSymbols.db-shm
+=======
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/ImageManipulation.API.dll
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/ImageManipulation.API.AssemblyInfoInputs.cache
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/ImageManipulation.API.pdb
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/ImageManipulation.API.sourcelink.json
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/rpswa.dswa.cache.json
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/CodeChunks.db
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/CodeChunks.db-shm
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/CodeChunks.db-wal
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/SemanticSymbols.db
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/SemanticSymbols.db-shm
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.1204.46620/SemanticSymbols.db-wal
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/DesignTimeBuild/.dtbcache.v2
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/v17/.futdcache.v2
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/v17/.suo
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/v17/DocumentLayout.backup.json
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/v17/DocumentLayout.json
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/ref/ImageManipulation.API.dll
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/refint/ImageManipulation.API.dll
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/apphost.exe
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/ImageManipulation.API.AssemblyInfo.cs
+/sumanarts/API/ImageManipulation/ImageManipulation.API/bin/Debug/net8.0/ImageManipulation.API.dll
+/sumanarts/API/ImageManipulation/ImageManipulation.API/bin/Debug/net8.0/ImageManipulation.API.exe
+/sumanarts/API/ImageManipulation/ImageManipulation.API/bin/Debug/net8.0/ImageManipulation.API.pdb
+>>>>>>> Stashed changes
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/DesignTimeBuild/.dtbcache.v2
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.878.3237/CodeChunks.db
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/CopilotIndices/17.14.878.3237/SemanticSymbols.db
+/sumanarts/API/ImageManipulation/ImageManipulation.API/bin/Debug/net8.0/ImageManipulation.API.dll
+/sumanarts/API/ImageManipulation/ImageManipulation.API/bin/Debug/net8.0/ImageManipulation.API.exe
+/sumanarts/API/ImageManipulation/ImageManipulation.API/bin/Debug/net8.0/ImageManipulation.API.pdb
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/ref/ImageManipulation.API.dll
+/sumanarts/API/ImageManipulation/ImageManipulation.API/obj/Debug/net8.0/refint/ImageManipulation.API.dll
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/v17/.futdcache.v2
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/v17/.suo
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/v17/DocumentLayout.backup.json
+/sumanarts/API/ImageManipulation/.vs/ImageManipulation/v17/DocumentLayout.json
+/sumanarts/API/ImageManipulation/ImageManipulation.API/Uploads/39d8de39-bda1-4b78-ba38-acbb5f5c0c98.png

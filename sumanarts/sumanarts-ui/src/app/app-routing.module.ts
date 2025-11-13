@@ -4,13 +4,18 @@ import { ArtworkAddComponent } from './artwork/artworks-add/artwork-add.componen
 import { HomeComponent } from './home/home.component';
 import { ArtworksListComponent } from './artwork/artworks-list/artworks-list.component';
 import { AddMediumComponent } from './add-medium/add-medium.component';
+import { CounterComponent } from './counter/counter/counter.component';
+import { PostsListComponent } from './posts/posts-list/posts-list.component';
 
 const routes: Routes = [
 
     {path:'home', component: HomeComponent, title :"Home - Artworks"},
     {path: 'listart', component: ArtworksListComponent,title :"List Artworks" },
+
         {path: 'addmedium', component: AddMediumComponent,title :"Add Medium" },
-    {path: 'addart', component: ArtworkAddComponent }
+    {path: 'addart', component: ArtworkAddComponent },
+            {path: 'counter', component: CounterComponent,title :"Counter page" },
+                    {path: 'posts', component: PostsListComponent,title :"Posts page" },
     
 ];
 

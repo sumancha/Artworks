@@ -62,8 +62,8 @@ namespace ArtImageManipulation.API.Services
             }
             var contentPath = environment.ContentRootPath;
             //TODO suman change folder
-            //var path = Path.Combine(contentPath, $"Uploads", fileNameWithExtension);
-            var path = Path.Combine(contentPath, $"Uploads");
+            var path = Path.Combine(contentPath, $"Uploads", fileNameWithExtension);
+            //var path = Path.Combine(contentPath, $"Uploads");
             if (!File.Exists(path))
             {
                 throw new FileNotFoundException($"Invalid file path");

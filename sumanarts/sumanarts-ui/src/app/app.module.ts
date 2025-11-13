@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +19,18 @@ import { ArtworkAddComponent } from './artwork/artworks-add/artwork-add.componen
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { Router, RouterModule } from '@angular/router';
 import { AddMediumComponent } from './add-medium/add-medium.component';
+<<<<<<< Updated upstream
 
+=======
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { CounterComponent } from './counter/counter/counter.component';
+import { CounterOutputComponent } from './counter/counter-output/counter-output.component';
+import { CounterButtonComponent } from './counter/counter-button/counter-button.component';
+import { appReducer } from './state/app.state';
+import { PostsListComponent } from './posts/posts-list/posts-list.component';
+ 
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -27,7 +38,11 @@ import { AddMediumComponent } from './add-medium/add-medium.component';
 ArtworkAddComponent,
 ArtworksListComponent,
 NavbarComponent,
-AddMediumComponent
+AddMediumComponent,
+CounterComponent,
+CounterOutputComponent,
+CounterButtonComponent,
+PostsListComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +54,7 @@ AddMediumComponent
  ImageModule,
  TagModule,
  CommonModule,
- ReactiveFormsModule,   SelectButtonModule,
+ ReactiveFormsModule,   SelectButtonModule, StoreModule.forRoot(appReducer), StoreDevtoolsModule.instrument({  logOnly: !isDevMode() }),
 
 ],
   providers: [  provideHttpClient(), provideAnimationsAsync(),   

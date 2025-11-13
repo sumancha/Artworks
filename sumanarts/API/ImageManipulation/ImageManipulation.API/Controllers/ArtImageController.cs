@@ -149,13 +149,14 @@ namespace ImageManipulation.API.Controllers
                 }
                 //var medium = await mediumrepository.FindMediumByIdAsync(existingArt.Medium);
                 //if (medium == null) { return StatusCode(StatusCodes.Status404NotFound, $"Medium with id: {AddArtImage.MediumId} does not found"); }
-                string folder = existingArt.Medium.MediumType;
-                string imagePathforDelete = Path.Combine(folder, existingArt.FileName);
+                //string folder = existingArt.Medium.MediumType;
+                //string imagePathforDelete = Path.Combine(folder, existingArt.FileName);
                 await artImageRepository.DeleteArtImageAsync(id);
                 // After deleting product from database,remove file from directory.
 
                 //  fileService.DeleteFile(existingArt.FileName);
-                fileService.DeleteFile(imagePathforDelete);
+                //fileService.DeleteFile(imagePathforDelete);
+                fileService.DeleteFile(existingArt.FileName);
                // return NoContent();  // return 204
                 return StatusCode(StatusCodes.Status202Accepted, existingArt);
             }
