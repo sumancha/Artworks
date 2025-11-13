@@ -19,7 +19,7 @@ import { ArtworkAddComponent } from './artwork/artworks-add/artwork-add.componen
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { Router, RouterModule } from '@angular/router';
 import { AddMediumComponent } from './add-medium/add-medium.component';
- 
+
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ AddMediumComponent
                 preset: Aura
             }
         })
-      ],
+  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
