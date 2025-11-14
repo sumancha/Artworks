@@ -49,7 +49,7 @@
 
                <!-- #######     here -->
 
-               
+  <div class="container">         
 <p-dataview [value]="artworkList" [rows]="5" [paginator]="true">
     <ng-template #list let-items>
         <div class="grid grid-cols-12 gap-4 grid-nogutter">
@@ -105,7 +105,7 @@
                                     <p-button
                                         icon="pi pi-shopping-cart"
                                         class="flex-auto md:flex-initial whitespace-nowrap"
-                                        label="Buy Now"
+                                        label="Buy Now" (click)="onCartClick(item)"
                                         [disabled]="item.sold"
                                     />
                                 </div>
@@ -117,4 +117,5 @@
             
         </ng-template>         
     </p-dataview>
+    </div>    
 <!-- </div>     -->

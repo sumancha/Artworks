@@ -11,7 +11,7 @@ export interface ArtImage {
     price: number | null;
     createdDate: Date | null;
     soldDate: Date | null;
-    mediumId: number;
+    // mediumId: number;
     medium: Medium;
 }
 

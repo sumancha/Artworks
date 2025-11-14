@@ -6,6 +6,8 @@
   margin: -3px -8px 0 -8px;
   padding: 0 8px 5px 8px;
   border-bottom: 2px solid #818285;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .left {
@@ -18,7 +20,8 @@
 }
 
 .logo {
-  height: 65px;
+  height: 100px;
+  /* margin-left: 50px; */
 }
 
 .cart {
@@ -87,7 +90,7 @@
   flex-direction: column;
   padding: 5px 20px;
   margin: 0 auto;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   min-width: 650px;
 }
 

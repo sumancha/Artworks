@@ -6,6 +6,7 @@ import { ArtworksListComponent } from './artwork/artworks-list/artworks-list.com
 import { AddMediumComponent } from './add-medium/add-medium.component';
 import { CounterComponent } from './counter/counter/counter.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
+import { CartComponent } from './artwork/cart/cart.component';
 
 const routes: Routes = [
 
@@ -16,6 +17,7 @@ const routes: Routes = [
     {path: 'addart', component: ArtworkAddComponent },
             {path: 'counter', component: CounterComponent,title :"Counter page" },
                     {path: 'posts', component: PostsListComponent,title :"Posts page" },
+                     {path: 'cart', component: CartComponent,title :"Cart" },
     
 ];
 

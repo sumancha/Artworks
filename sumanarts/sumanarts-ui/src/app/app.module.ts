@@ -19,9 +19,8 @@ import { ArtworkAddComponent } from './artwork/artworks-add/artwork-add.componen
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { Router, RouterModule } from '@angular/router';
 import { AddMediumComponent } from './add-medium/add-medium.component';
-<<<<<<< Updated upstream
-
-=======
+ 
+ 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CounterComponent } from './counter/counter/counter.component';
@@ -29,8 +28,9 @@ import { CounterOutputComponent } from './counter/counter-output/counter-output.
 import { CounterButtonComponent } from './counter/counter-button/counter-button.component';
 import { appReducer } from './state/app.state';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
+import { CartComponent } from './artwork/cart/cart.component';
  
->>>>>>> Stashed changes
+ 
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ AddMediumComponent,
 CounterComponent,
 CounterOutputComponent,
 CounterButtonComponent,
-PostsListComponent
+PostsListComponent,
+CartComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +65,7 @@ PostsListComponent
             }
         })
   ],
-  providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

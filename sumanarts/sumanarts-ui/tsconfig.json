@@ -5,12 +5,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-<<<<<<< Updated upstream
+
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-=======
+
     "strict": false,
->>>>>>> Stashed changes
+
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

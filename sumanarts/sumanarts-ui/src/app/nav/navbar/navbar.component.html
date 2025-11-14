@@ -1,15 +1,16 @@
 <div class="container">
+   <img class="logo" src="/assets/images/logo.png" alt="Logo" />
   <div class="right">
-    <!-- <img class="logo" src="../../assets/images/logo.png" alt="Logo" /> -->
+    
      <!-- assets/images/logo.png" alt="Logo" /> -->
     <a routerLink="/home" routerLinkActive="active">Home</a>
     <a routerLink="/addart" routerLinkActive="active">Add Art</a>
-          <a routerLink="/listart" routerLinkActive="active">List Art</a>
-            <a routerLink="/addmedium" routerLinkActive="active">add Medium</a>
+          <a routerLink="/listart" routerLinkActive="active">Arts List</a>
+            <a routerLink="/addmedium" routerLinkActive="active">Add Medium</a>
             <a routerLink="/counter" routerLinkActive="active">Counter</a>
                    <a routerLink="/posts" routerLinkActive="active">Posts</a>
     <div class="cart">
-      <a routerLink="/cart" routerLinkActive="active">Cart</a>
+      <a routerLink="/cart" routerLinkActive="active">Cart({{ cartItemCount$ |async}})</a>
     </div>
   <!-- </div>
   <div class="right" *ngIf="!user">

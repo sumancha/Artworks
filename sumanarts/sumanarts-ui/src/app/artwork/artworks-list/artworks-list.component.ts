@@ -13,6 +13,8 @@ import { ButtonModule } from 'primeng/button';
 import { MessageModule } from 'primeng/message';
 import { CommonModule } from '@angular/common';
 import { environment } from '../../../environments/environment';
+import { AppState } from 'src/app/state/app.state';
+import { Store } from '@ngrx/store';
 // import { ImageManipulationService } from 'src/app/services/image-manipulation.service';
 // import { ArtImage } from 'src/model/ArtImage';
 
@@ -42,7 +44,7 @@ this.layout ='list'  ;
 // artworkList:ArtImage[]=[];
 mediumList: Medium[]= [];
 imageBaseUrl = environment.apiUrl + '/resources/';
-constructor( private imageService: ImageManipulationService, private mediumService:MediumService,private http: HttpClient){}
+constructor( private imageService: ImageManipulationService, private mediumService:MediumService,private http: HttpClient, private store:Store<AppState>){}
 
 ngOnInit() {
 
@@ -91,5 +93,12 @@ getSeverity(artwork: ArtImage) {
         );
 
   
+ }
+
+ onCartClick(item: ArtImage): void {
+  console.log("Cart clicked");
+  console.log(item);
+  // Dispatch action to add item to cart
+  this.store.dispatch({ type: '[Cart] Add Item To Cart', item });
  }
 }
