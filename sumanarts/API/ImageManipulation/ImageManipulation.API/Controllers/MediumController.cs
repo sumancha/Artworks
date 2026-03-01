@@ -6,6 +6,7 @@ using ImageManipulation.API.DTO;
 using ImageManipulation.API.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 
 namespace ImageManipulation.API.Controllers
@@ -15,11 +16,14 @@ namespace ImageManipulation.API.Controllers
     public class MediumController : ControllerBase
     {
         private readonly IMediumrepository mediumrepository;
+        private readonly IMemoryCache cache;
         private readonly ILogger logger;
+        const string cacheKey = "AllMediums";
 
-        public MediumController(IMediumrepository mediumrepository, ILogger<MediumController> logger)
+        public MediumController(IMediumrepository mediumrepository, IMemoryCache _cache, ILogger<MediumController> logger)
         {
             this.mediumrepository = mediumrepository;
+            this.cache = _cache;
             this.logger = logger;
              
         }
@@ -30,8 +34,24 @@ namespace ImageManipulation.API.Controllers
         {
             try
             {
-                var mediums = await mediumrepository.GetMediumsAsync();
-                return Ok(mediums);
+                if (cache.TryGetValue(cacheKey, out IEnumerable<Medium> mediums))
+                {
+                    logger.LogInformation("returning mediums from cache");
+                    return Ok(mediums);
+                }
+                else
+                {
+                    logger.LogInformation("mediums not found in cache");
+                    mediums = await mediumrepository.GetMediumsAsync();
+
+                     var cacheEntryOptions = new MemoryCacheEntryOptions()
+                        .SetSlidingExpiration(TimeSpan.FromMinutes(15))
+                        .SetAbsoluteExpiration(TimeSpan.FromHours(2))
+                        .SetPriority(CacheItemPriority.Normal);
+                     cache.Set(cacheKey, mediums);
+
+                    return Ok(mediums);
+                }
             }
             catch (Exception ex) { 
             logger.LogError(ex.StackTrace);
@@ -52,6 +72,16 @@ public async Task<IActionResult> CreateMedium([FromBody] AddMediumDTO addMediumD
                  };
      
                 var createdArt = await mediumrepository.AddMediumAsync(medium);
+
+                //var cacheKey = $"AllMediums";
+                //Logger.LogInformation("mediums adding ");
+                //         var cacheEntryOptions = new MemoryCacheEntryOptions()
+                //.SetSlidingExpiration(TimeSpan.FromMinutes(30)) // Set an appropriate expiration policy
+                //.SetAbsoluteExpiration(TimeSpan.FromHours(2));
+
+                //      cache.Set(cacheKey, createdArt, cacheEntryOptions);
+                 cache.Remove(cacheKey);
+
                 return CreatedAtAction(nameof(CreateMedium), createdArt);
             }
             catch (Exception ex)

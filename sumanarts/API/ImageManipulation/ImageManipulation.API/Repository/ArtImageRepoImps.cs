@@ -25,14 +25,27 @@ namespace ArtImageManipulation.API.Repository
         {
             var existingArt = await context.ArtImages.FirstOrDefaultAsync(x => x.Id == Id);
             if (existingArt == null) { return null; }
-            existingArt.Medium = artimage.Medium;
-            existingArt.CreatedDate = artimage.CreatedDate;
-            existingArt.SoldDate = artimage.SoldDate;
-            existingArt.ArtDetails = artimage.ArtDetails;
-            existingArt.price = artimage.price;
-            existingArt.sold = artimage.sold;
-            existingArt.Title = artimage.Title;
-            await context.SaveChangesAsync();
+            using (var transaction = await context.Database.BeginTransactionAsync())
+            {
+                try
+                {
+
+                    existingArt.Medium = artimage.Medium;
+                    existingArt.CreatedDate = artimage.CreatedDate;
+                    existingArt.SoldDate = artimage.SoldDate;
+                    existingArt.ArtDetails = artimage.ArtDetails;
+                    existingArt.price = artimage.price;
+                    existingArt.sold = artimage.sold;
+                    existingArt.Title = artimage.Title;
+                    await context.SaveChangesAsync();
+
+                    await transaction.CommitAsync();
+                }
+                catch (Exception ex)
+                {
+                    await transaction.RollbackAsync();
+                }
+            }
             return existingArt;
         }
 
@@ -52,8 +65,11 @@ namespace ArtImageManipulation.API.Repository
 
         public async Task<List<ArtImage>> GetArtImagesAsync()
         {
-            return await context.ArtImages.Include("Medium").ToListAsync();
-           // return await context.ArtImages.ToListAsync();
+            var artImages = await context.ArtImages.Include("Medium").ToListAsync();
+            if (artImages == null) return (null);
+            // return await context.ArtImages.ToListAsync();
+
+            return artImages;
         }
 
         public async Task<ArtImage> DeleteArtImageAsync(int Id)

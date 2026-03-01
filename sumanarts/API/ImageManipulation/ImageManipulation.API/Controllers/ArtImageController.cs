@@ -5,6 +5,7 @@ using ArtImageManipulation.API.Services;
 using ImageManipulation.API.Repository;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -16,15 +17,19 @@ namespace ImageManipulation.API.Controllers
     public class ArtImageController : ControllerBase
     {
         private readonly IArtImageRepository artImageRepository;
+        //private readonly IMemoryCache _cache;
         private readonly IMediumrepository mediumrepository;
         private readonly IFileService fileService;
+        private readonly IMemoryCache cache;
         private readonly ILogger<ArtImageController> logger;
+        const string cacheKey = "AllArtImages";
 
-        public ArtImageController(IArtImageRepository artImageRepository, IMediumrepository mediumrepository, IFileService _fileService, ILogger<ArtImageController> logger)
+        public ArtImageController(IArtImageRepository artImageRepository, IMediumrepository mediumrepository, IFileService _fileService,IMemoryCache _cache, ILogger<ArtImageController> logger)
         {
             this.artImageRepository = artImageRepository;
             this.mediumrepository = mediumrepository;
             this.fileService = _fileService;
+            this.cache = _cache;
             this.logger = logger;
         }
 
@@ -34,8 +39,26 @@ namespace ImageManipulation.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-          var artImages = await artImageRepository.GetArtImagesAsync();
-            return Ok(artImages);
+            if (cache.TryGetValue(cacheKey, out IEnumerable<ArtImage> artImages))
+            {
+                logger.LogInformation("returning artImages from cache");
+                return Ok(artImages);
+            }
+            else
+            {
+                logger.LogInformation("artImages not found in cache");
+                artImages = await artImageRepository.GetArtImagesAsync();
+
+              
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(15))
+                    .SetAbsoluteExpiration(TimeSpan.FromHours(2))
+                    .SetPriority(CacheItemPriority.Normal);
+                cache.Set(cacheKey, artImages);
+
+                return Ok(artImages);
+            }
         }
 
         // GET api/<ArtImageController>/5
@@ -44,6 +67,26 @@ namespace ImageManipulation.API.Controllers
         {
             try
             {
+                if (cache.TryGetValue(cacheKey, out List<ArtImage> cachedArtImage))
+                {
+                    // Handle cache miss (fetch from DB and set cache here)
+                    // For demonstration, assume cachedProducts is populated
+                    
+
+                
+                    if (cachedArtImage != null)
+                    {
+                        List<ArtImage> cachedArtImageList = new List<ArtImage>();
+                        cachedArtImageList.AddRange( cachedArtImage);
+                        ArtImage artImage =   cachedArtImageList.FirstOrDefault(p => p.Id == id);
+                        if (artImage != null)
+                        {
+                            logger.LogInformation("art Image found in cache w " + artImage.Id + " " + artImage.Title);
+                            return Ok(artImage);
+                        }
+                    }
+                }
+
                 var existingArt = await artImageRepository.FindArtImageByIdAsync(id);
                 if (existingArt == null)
                 {
@@ -93,6 +136,8 @@ namespace ImageManipulation.API.Controllers
                     //ProductImage = createdImageName
                 };
                 var createdArt = await artImageRepository.AddArtImageAsync(artImage);
+                cache.Remove(cacheKey);
+
                 return CreatedAtAction(nameof(CreateArtwork), createdArt);
             }
             catch (Exception ex)
@@ -157,7 +202,9 @@ namespace ImageManipulation.API.Controllers
                 //  fileService.DeleteFile(existingArt.FileName);
                 //fileService.DeleteFile(imagePathforDelete);
                 fileService.DeleteFile(existingArt.FileName);
-               // return NoContent();  // return 204
+                // return NoContent();  // return 204
+
+                cache.Remove(cacheKey);
                 return StatusCode(StatusCodes.Status202Accepted, existingArt);
             }
             catch (Exception ex)
