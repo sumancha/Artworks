@@ -19,7 +19,7 @@ import { ArtworkAddComponent } from './artwork/artworks-add/artwork-add.componen
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { Router, RouterModule } from '@angular/router';
 import { AddMediumComponent } from './add-medium/add-medium.component';
- 
+ import { provideToastr } from 'ngx-toastr';
  
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -29,6 +29,8 @@ import { CounterButtonComponent } from './counter/counter-button/counter-button.
 import { appReducer } from './state/app.state';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { CartComponent } from './artwork/cart/cart.component';
+import { UserComponent } from './user/user.component';
+import { RegistrationComponent } from './user/registration/registration.component';
  
  
 
@@ -43,7 +45,9 @@ CounterComponent,
 CounterOutputComponent,
 CounterButtonComponent,
 PostsListComponent,
-CartComponent
+CartComponent,
+UserComponent,
+RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,7 @@ CartComponent
  ReactiveFormsModule,   SelectButtonModule, StoreModule.forRoot(appReducer), StoreDevtoolsModule.instrument({  logOnly: !isDevMode() }),
 
 ],
-  providers: [  provideHttpClient(), provideAnimationsAsync(),   
+  providers: [  provideHttpClient(), provideAnimationsAsync(),    provideToastr(),
         providePrimeNG({
             theme: {
                 preset: Aura

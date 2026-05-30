@@ -7,12 +7,15 @@ import { AddMediumComponent } from './add-medium/add-medium.component';
 import { CounterComponent } from './counter/counter/counter.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { CartComponent } from './artwork/cart/cart.component';
+import { UserComponent } from './user/user.component';
+// import { RegistrationComponent } from './user/registration/registration.component';
 
 const routes: Routes = [
 
     {path:'home', component: HomeComponent, title :"Home - Artworks"},
     {path: 'listart', component: ArtworksListComponent,title :"List Artworks" },
-
+ {path: 'user', component: UserComponent,title :"user" },
+//  {path: 'register', component: RegistrationComponent,title :"registration" },
         {path: 'addmedium', component: AddMediumComponent,title :"Add Medium" },
     {path: 'addart', component: ArtworkAddComponent },
             {path: 'counter', component: CounterComponent,title :"Counter page" },

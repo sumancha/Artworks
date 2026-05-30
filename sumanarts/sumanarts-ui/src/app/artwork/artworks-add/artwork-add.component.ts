@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
  
 import { Status } from '../../../models/status';
-import { ImageManipulationService } from '../../services/image-manipulation.service';
+import { ImageManipulationService } from '../../shared/services/image-manipulation.service';
 import { ArtImage, Medium } from '../../../models/artImage';
 import { AddArtImage } from '../../../models/addArtImage';
 import { Router } from '@angular/router';
 import { SelectButtonModule } from 'primeng/selectbutton';
-import { MediumService } from '../../services/medium.service';
+import { MediumService } from '../../shared/services/medium.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { restrictedWordsValidator } from '../../Validator/restricted-words-validator';
 @Component({

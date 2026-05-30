@@ -1,7 +1,7 @@
 import { Component,signal  } from '@angular/core';
 import { ArtImage, Medium } from '../../../models/artImage';
-import { ImageManipulationService } from '../../services/image-manipulation.service';
-import { MediumService } from '../../services/medium.service';
+import { ImageManipulationService } from '../../shared/services/image-manipulation.service';
+import { MediumService } from '../../shared/services/medium.service';
 import { FormControl, FormGroup, FormsModule } from '@angular/forms';
 import { SelectButton } from 'primeng/selectbutton';
 import { HttpClient } from '@angular/common/http';

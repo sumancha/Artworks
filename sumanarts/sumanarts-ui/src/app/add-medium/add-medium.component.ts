@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MediumService } from '../services/medium.service';
+import { MediumService } from '../shared/services/medium.service';
 import { Router } from '@angular/router';
 import { Medium } from '../../models/artImage';
 import { Status } from '../../models/status';
