@@ -1,5 +1,5 @@
-﻿using ArtImageManipulation.API;
-using ArtImageManipulation.API.Entity;
+﻿using ImageManipulation.API.Entity;
+using ImageManipulation.API.Data;
 using ImageManipulation.API.DTO;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,8 +14,12 @@ namespace ImageManipulation.API.Repository
             this.context = context;
         }
 
-        public async Task<Medium> AddMediumAsync(Medium medium)
+        public async Task<Medium> InsertAsync(Medium medium)
         {
+            //var dateTime = DateTime.Now;
+            //medium.CreatedDate = dateTime;
+            //medium.LastModifiedDate = dateTime;
+
             context.Mediums.Add(medium);
             await context.SaveChangesAsync();
             return medium;
@@ -23,28 +27,35 @@ namespace ImageManipulation.API.Repository
 
         }
 
-        public Task<Medium> DeleteMediumAsync(int Id)
+
+
+        public async Task<Medium?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var meduim = await context.Mediums.FindAsync(id);
+            return meduim;
         }
 
-        public async Task<Medium?> FindMediumByIdAsync(int id)
-        {
-            var artimage = await context.Mediums.FindAsync(id);
-            return artimage;
-        }
-
-        public async Task<List<Medium>> GetMediumsAsync()
+        public async Task<IReadOnlyList<Medium>> GetAllAsync()
         {
          return await  context.Mediums.ToListAsync();
         }
 
-        public Task<Medium> UpdateMediumAsync(int id, ArtImage artimage)
+
+        public async Task<Medium> UpdateAsync(int id, Medium Medium)
+        {
+            context.Mediums.Update(Medium);
+            await context.SaveChangesAsync();
+            return Medium;
+        }
+
+       
+
+        public Task<Medium> Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Medium> UpdateMediumAsync(int id, Medium Medium)
+        public Task<Medium> SaveAsync()
         {
             throw new NotImplementedException();
         }

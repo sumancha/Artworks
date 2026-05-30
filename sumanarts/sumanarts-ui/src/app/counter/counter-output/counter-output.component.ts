@@ -4,12 +4,13 @@ import { AppState } from '../../state/app.state';
 import { Observable } from 'rxjs';
 import { Counter } from '../../../models/counter';
 import { getCounter } from '../state/counter.select';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'art-counter-output',
-  standalone: false,
-  templateUrl: './counter-output.component.html',
-  styleUrl: './counter-output.component.css'
+    selector: 'art-counter-output',
+    templateUrl: './counter-output.component.html',
+    styleUrl: './counter-output.component.css',
+    imports: [AsyncPipe]
 })
 export class CounterOutputComponent {
   counter$ !:Observable<number>

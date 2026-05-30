@@ -5,12 +5,13 @@ import { Observable } from 'rxjs';
 import { PostState } from '../state/post.state';
 import { getPosts } from '../state/post.select';
 import { Post } from '../../../models/post';
+import { NgFor, AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'art-posts-list',
-  standalone: false,
-  templateUrl: './posts-list.component.html',
-  styleUrl: './posts-list.component.css'
+    selector: 'art-posts-list',
+    templateUrl: './posts-list.component.html',
+    styleUrl: './posts-list.component.css',
+    imports: [NgFor, AsyncPipe]
 })
 export class PostsListComponent {
   posts$ !:Observable<Post[]>

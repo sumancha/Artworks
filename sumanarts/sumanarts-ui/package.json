@@ -22,7 +22,7 @@
     "@ngrx/store": "^19.2.1",
     "@ngrx/store-devtools": "^19.2.1",
     "@primeng/themes": "^19.1.4",
-    "@primeuix/themes": "^1.2.3",
+    "@primeuix/themes": "^1.2.5",
     "bootstrap": "^5.3.3",
     "ngx-toastr": "^17.0.2",
     "primeflex": "^3.3.1",

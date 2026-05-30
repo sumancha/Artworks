@@ -1,8 +1,6 @@
-﻿using ArtImageManipulation.API.DTO;
-using ArtImageManipulation.API.Entity;
-using ArtImageManipulation.API.Repository;
-using ArtImageManipulation.API.Services;
+﻿
 using ImageManipulation.API.DTO;
+using ImageManipulation.API.Entity;
 using ImageManipulation.API.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -42,7 +40,7 @@ namespace ImageManipulation.API.Controllers
                 else
                 {
                     logger.LogInformation("mediums not found in cache");
-                    mediums = await mediumrepository.GetMediumsAsync();
+                    mediums = await mediumrepository.GetAllAsync();
 
                      var cacheEntryOptions = new MemoryCacheEntryOptions()
                         .SetSlidingExpiration(TimeSpan.FromMinutes(15))
@@ -69,9 +67,14 @@ public async Task<IActionResult> CreateMedium([FromBody] AddMediumDTO addMediumD
                 var medium = new Medium
                 {
                     MediumType = addMediumDTO.MediumType,
-                 };
+                    CreatedBy = addMediumDTO.CreatedBy,
+                    DateCreated = DateTime.Now,
+                    LastModifiedBy = addMediumDTO.CreatedBy,
+                    LastModifiedDate=DateTime.Now
+                };
+
      
-                var createdArt = await mediumrepository.AddMediumAsync(medium);
+                var createdArt = await mediumrepository.InsertAsync(medium);
 
                 //var cacheKey = $"AllMediums";
                 //Logger.LogInformation("mediums adding ");
@@ -90,5 +93,39 @@ public async Task<IActionResult> CreateMedium([FromBody] AddMediumDTO addMediumD
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateMedium(int id, [FromBody] UpdateMediumDTO updateMediumDTO)
+        {
+            try
+            {
+                var medium = await mediumrepository.GetByIdAsync(id);
+                if (medium == null) { return StatusCode(StatusCodes.Status404NotFound, $"Medium with id: {id} does not found"); }
+
+                medium.MediumType = updateMediumDTO.MediumType;
+                medium.LastModifiedBy = updateMediumDTO.LastModifiedBy;
+                medium.LastModifiedDate = DateTime.Now;
+
+
+                var updatedArt = await mediumrepository.UpdateAsync(id, medium);
+
+                //var cacheKey = $"AllMediums";
+                //Logger.LogInformation("mediums adding ");
+                //         var cacheEntryOptions = new MemoryCacheEntryOptions()
+                //.SetSlidingExpiration(TimeSpan.FromMinutes(30)) // Set an appropriate expiration policy
+                //.SetAbsoluteExpiration(TimeSpan.FromHours(2));
+
+                //      cache.Set(cacheKey, createdArt, cacheEntryOptions);
+                cache.Remove(cacheKey);
+
+                return CreatedAtAction(nameof(CreateMedium), updatedArt);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
+    }
 }

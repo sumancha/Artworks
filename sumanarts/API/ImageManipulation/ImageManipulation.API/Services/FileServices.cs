@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 // NOTE: for using above namespace include this line in csproj of this class library : <FrameworkReference Include="Microsoft.AspNetCore.App" />
 
 
-namespace ArtImageManipulation.API.Services
+namespace  ImageManipulation.API.Services
 {
     public interface IFileService
     {

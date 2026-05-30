@@ -1,15 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ImageManipulation.API.Entity.Common;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ArtImageManipulation.API.Entity
+namespace ImageManipulation.API.Entity
 {
     [Table("Medium")]
-    public class Medium
+    public class Medium : BaseDomainEntity
     {
-        public int Id { get; set; }
+ 
 
         [Required]
         [MaxLength(30)]
         public string MediumType { get; set; }
+
+        //public int ArtInfoId { get; set; }
+        //public ArtInfo ArtInfo { get; set; }
     }
 }

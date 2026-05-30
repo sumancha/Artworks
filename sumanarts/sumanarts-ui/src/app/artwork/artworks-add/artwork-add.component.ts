@@ -9,12 +9,12 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { MediumService } from '../../shared/services/medium.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { restrictedWordsValidator } from '../../Validator/restricted-words-validator';
+import { NgFor } from '@angular/common';
 @Component({
     selector: 'art-artwork-add',
     templateUrl: './artwork-add.component.html',
     styleUrl: './artwork-add.component.css',
-//  providers: [  ReactiveFormsModule,FormControl,  FormGroup],
-    standalone: false,
+    imports: [ReactiveFormsModule, NgFor],
 })
 export class ArtworkAddComponent {
   addArtFormgrp!: FormGroup;

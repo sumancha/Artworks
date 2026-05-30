@@ -1,7 +1,7 @@
-<!-- <div class="mb-4 h2 text-success">
+<div class="mb-4 h2 text-success">
   Sign up
 </div>
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="mb-3">
     <input class="form-control bg-body-secondary" placeholder="Full Name" formControlName="fullName">
     <div class="error-feedback" *ngIf="hasDisplayableError('fullName') && form.controls.fullName.hasError('required')">
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="mb-3">
-    <input class="form-control bg-body-secondary" placeholder="Password" formControlName="password">
+    <input class="form-control bg-body-secondary" type="password" placeholder="Password" formControlName="password">
     <div class="error-feedback" *ngIf="hasDisplayableError('password')">
       <ng-container [ngSwitch]="form.controls.password.errors | firstKey">
         <div *ngSwitchCase="'required'">
@@ -37,9 +37,9 @@
     </div>
   </div>
   <div class="mb-3">
-    <input class="form-control bg-body-secondary" placeholder="Confirm Password" formControlName="confirmPassword">
+    <input class="form-control bg-body-secondary" placeholder="Confirm Password" type="password" formControlName="confirmPassword">
     <div class="error-feedback" 
-    *ngIf="hasDisplayableError('confirmPassword') && registerForm.controls.confirmPassword.hasError('passwordMismatch')">
+    *ngIf="hasDisplayableError('confirmPassword') && form.controls.confirmPassword.hasError('passwordMismatch')">
       Passwords doesn't match.
     </div>
   </div>
@@ -48,4 +48,4 @@
       Register
     </button>
   </div>
-</form> -->
+</form>

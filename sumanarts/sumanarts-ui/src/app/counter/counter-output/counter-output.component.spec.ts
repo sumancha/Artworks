@@ -8,8 +8,8 @@ describe('CounterOutputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CounterOutputComponent]
-    })
+    imports: [CounterOutputComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(CounterOutputComponent);

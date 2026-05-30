@@ -5,12 +5,14 @@ import { AppState } from 'src/app/state/app.state';
 import { ArtImage } from 'src/models/artImage';
 import { selectCartItem, selectCartItemCount, selectCartTotalPrice } from './store/cart.select';
 import { clearCart, removeItemFromCart } from './store/cart.action';
+import { NgIf, NgFor, AsyncPipe, CurrencyPipe } from '@angular/common';
+import { ButtonDirective, Button } from 'primeng/button';
 
 @Component({
-  selector: 'art-cart',
-  standalone: false,
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css'
+    selector: 'art-cart',
+    templateUrl: './cart.component.html',
+    styleUrl: './cart.component.css',
+    imports: [NgIf, ButtonDirective, NgFor, Button, AsyncPipe, CurrencyPipe]
 })
 export class CartComponent {
      cartItems$: Observable<ArtImage[]>;

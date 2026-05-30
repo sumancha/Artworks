@@ -6,29 +6,30 @@
     <section>
       <nav>Art Info</nav>
       <div>
-        <input formControlName="title"  class="form-control" placeholder="Art Title" />
+        <input formControlName="title"  class="form-control bg-body-secondary" placeholder="Art Title" />
         @if( title?.errors?.['required'] && title?.invalid && sold?.touched){<em> Please enter title</em>}
 
-        <input   formControlName="artDatails" class="form-control" placeholder="Art Details" />  
+        <input   formControlName="artDatails" class="form-control bg-body-secondary" placeholder="Art Details" />  
             @if( artDatails?.touched && artDatails?.invalid ){<em> Detail must be less than 500 char</em>}
         @if( artDatails?.errors?.['required'] && artDatails?.invalid && sold?.touched ){<em> Please enter Details</em>}
  <!-- <label for="mediumId" class="form-control" class="form-label">Medium</label> -->
         <div class="dropdown">
-        <select style="width: 500px;" class="form-control" formControlName="mediumId" >
+        <select style="width: 500px;" class="form-control bg-body-secondary" formControlName="mediumId" >
           <option value="null" disabled selected >Select a Medium</option>
           <option *ngFor="let medium of mediums" [value]="medium.id">{{medium.mediumType}}</option>
         </select>
 
         </div>
          <label for="createdDate" class="form-label">Created Date</label>
-        <input formControlName="createdDate" class="form-control"  type="date" placeholder="Created Date" />
+         
+        <input formControlName="createdDate" class="form-control  bg-body-secondary"  type="date" placeholder="Created Date" />
 
       </div>
     </section>
     <section>
       <nav>Image</nav>
       <div class="mb-3">
-               <input formGroupName="imageFile" class="form-control form-control-md" type="file" (change)="onChange($event)" >
+               <input formGroupName="imageFile" class="form-control bg-body-secondary" type="file" (change)="onChange($event)" >
 
 
       </div>
@@ -44,8 +45,8 @@
           </div>
         <!-- <input formGroupName="sold" placeholder="Sold" /> -->
          <input 
-              formControlName="soldDate"  class="form-control" type="date" placeholder="Sold Date" />
-           <input  formControlName="price" class="form-control" placeholder="Price" />
+              formControlName="soldDate"  class="form-control  bg-body-secondary" type="date" placeholder="Sold Date" />
+           <input  formControlName="price" class="form-control  bg-body-secondary" placeholder="Price" />
             @if( sold?.errors?.['required'] && sold?.invalid && sold?.touched){<em> Please Select a value</em>}
       </div>
     </section>

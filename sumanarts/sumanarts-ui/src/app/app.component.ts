@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from './nav/navbar/navbar.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+    selector: 'app-root',
+    templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    standalone: false
+    imports: [NavbarComponent, RouterOutlet]
 })
 export class AppComponent {
   title = 'sumanarts-ui';

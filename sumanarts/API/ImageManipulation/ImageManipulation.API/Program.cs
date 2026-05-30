@@ -1,12 +1,17 @@
-using ArtImageManipulation.API;
-using ArtImageManipulation.API.Repository;
-using ArtImageManipulation.API.Services;
+
+using ImageManipulation.API.Data;
 using ImageManipulation.API.Repository;
+using ImageManipulation.API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Net;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,17 +25,27 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ArtImageManipulationConnectionString"),
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AIMConnectionString"),
         providerOptions => providerOptions.EnableRetryOnFailure()
         );
+
+
     // enable sensetive datalogging and detailerror only for dev environment
     if (builder.Environment.IsDevelopment())
     { 
         options.EnableSensitiveDataLogging().EnableDetailedErrors(); 
     }
 });
+
+//builder.Services.AddDbContext<ArtAuthDbContext>(options =>
+//options.UseSqlServer(builder.Configuration.GetConnectionString("ArtInfoAuthConnectString"),
+//providerOptions => providerOptions.EnableRetryOnFailure())
+//);
+
+
+
 builder.Services.AddMemoryCache(); // Register IMemoryCache
-builder.Services.AddScoped<IArtImageRepository, ArtImageRepoImps>();
+builder.Services.AddScoped<IArtInfoRepository, ArtInfoRepoImps>();
 
 builder.Services.AddScoped<IMediumrepository, MediumRepoImps>();
 builder.Services.AddScoped<IFileService, FileService>();
@@ -43,6 +58,44 @@ builder.Services.AddScoped<IFileService, FileService>();
 //            policy.WithOrigins("*").AllowAnyMethod().AllowAnyHeader(); ;
 //        });
 //});
+
+builder.Services.AddIdentity<IdentityUser , IdentityRole  >()
+    //.AddRoles<IdentityRole>()
+    //.AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("ArtImage")
+    .AddEntityFrameworkStores<ArtAuthDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+});
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+});
+
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//    .AddJwtBearer(options =>
+//    options.TokenValidationParameters = new TokenValidationParameters
+//    {
+//        ValidateIssuer = true,
+//        ValidateAudience = true,
+//        ValidateLifetime = true,
+//        ValidateIssuerSigningKey = true,
+//        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+//        ValidAudience = builder.Configuration["Jwt:Audience"],
+//        IssuerSigningKey = new SymmetricSecurityKey(
+//            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+//    });
+
 var app = builder.Build();
 app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseExceptionHandler(

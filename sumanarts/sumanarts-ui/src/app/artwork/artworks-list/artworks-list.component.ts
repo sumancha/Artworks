@@ -6,12 +6,12 @@ import { FormControl, FormGroup, FormsModule } from '@angular/forms';
 import { SelectButton } from 'primeng/selectbutton';
 import { HttpClient } from '@angular/common/http';
 import { Tag } from 'primeng/tag';
-import { DataViewModule } from 'primeng/dataview';
+import { DataViewModule, DataView } from 'primeng/dataview';
 import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
+import { ButtonModule, Button } from 'primeng/button';
 
 import { MessageModule } from 'primeng/message';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor, NgClass, DatePipe } from '@angular/common';
 import { environment } from '../../../environments/environment';
 import { AppState } from 'src/app/state/app.state';
 import { Store } from '@ngrx/store';
@@ -22,8 +22,14 @@ import { Store } from '@ngrx/store';
     selector: 'art-artworks-list',
     templateUrl: './artworks-list.component.html',
     styleUrls: ['./artworks-list.component.css'],
-    standalone: false,
-    // providers: [ FormControl, FormGroup],
+    imports: [
+        DataView,
+        NgFor,
+        NgClass,
+        Tag,
+        Button,
+        DatePipe,
+    ],
 })
 export class ArtworksListComponent {
      layout: string = 'list';

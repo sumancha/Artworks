@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MediumService } from '../shared/services/medium.service';
 import { Router } from '@angular/router';
 import { Medium } from '../../models/artImage';
 import { Status } from '../../models/status';
 
 @Component({
-  selector: 'art-add-medium',
-  standalone: false,
-  templateUrl: './add-medium.component.html',
-  styleUrl: './add-medium.component.css'
+    selector: 'art-add-medium',
+    templateUrl: './add-medium.component.html',
+    styleUrl: './add-medium.component.css',
+    imports: [ReactiveFormsModule]
 })
 export class AddMediumComponent {
 

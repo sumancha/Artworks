@@ -4,10 +4,9 @@ import { Store } from '@ngrx/store';
 import { decrement, increment } from '../state/counter.action';
 
 @Component({
-  selector: 'art-counter-button',
-  standalone: false,
-  templateUrl: './counter-button.component.html',
-  styleUrl: './counter-button.component.css'
+    selector: 'art-counter-button',
+    templateUrl: './counter-button.component.html',
+    styleUrl: './counter-button.component.css'
 })
 export class CounterButtonComponent {
   constructor(private store:Store<AppState>) { }
