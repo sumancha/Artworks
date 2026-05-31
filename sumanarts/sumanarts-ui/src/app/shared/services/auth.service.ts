@@ -3,14 +3,16 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {}
   authURL = environment.authUrl;
 
-  createUser(formData:any){
-    return this.http.post(this.authURL+'/signup',formData);
+  createUser(formData: any) {
+    return this.http.post(this.authURL + '/signup', formData);
   }
-  
+  signIn(formData: any) {
+    return this.http.post(this.authURL + '/signin', formData);
+  }
 }
