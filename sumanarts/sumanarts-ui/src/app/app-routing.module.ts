@@ -8,24 +8,44 @@ import { CounterComponent } from './counter/counter/counter.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { CartComponent } from './artwork/cart/cart.component';
 import { UserComponent } from './user/user.component';
+import { RegistrationComponent } from './user/registration/registration.component';
+import { LoginComponent } from './user/login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 // import { RegistrationComponent } from './user/registration/registration.component';
 
-const routes: Routes = [
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full',
+  },
+  { path: 'home', component: HomeComponent, title: 'Home - Artworks' },
+  { path: 'listart', component: ArtworksListComponent, title: 'List Artworks' },
+  {
+    path: '',
+    component: UserComponent,
+    children: [
+      {
+        path: 'signup',
+        component: RegistrationComponent,
+      },
 
-    {path:'home', component: HomeComponent, title :"Home - Artworks"},
-    {path: 'listart', component: ArtworksListComponent,title :"List Artworks" },
- {path: 'user', component: UserComponent,title :"user" },
-//  {path: 'register', component: RegistrationComponent,title :"registration" },
-        {path: 'addmedium', component: AddMediumComponent,title :"Add Medium" },
-    {path: 'addart', component: ArtworkAddComponent },
-            {path: 'counter', component: CounterComponent,title :"Counter page" },
-                    {path: 'posts', component: PostsListComponent,title :"Posts page" },
-                     {path: 'cart', component: CartComponent,title :"Cart" },
-    
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
+    ],
+  },
+  { path: 'dashboard', component: DashboardComponent, title: 'dashboard' },
+  { path: 'addmedium', component: AddMediumComponent, title: 'Add Medium' },
+  { path: 'addart', component: ArtworkAddComponent },
+  { path: 'counter', component: CounterComponent, title: 'Counter page' },
+  { path: 'posts', component: PostsListComponent, title: 'Posts page' },
+  { path: 'cart', component: CartComponent, title: 'Cart' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
