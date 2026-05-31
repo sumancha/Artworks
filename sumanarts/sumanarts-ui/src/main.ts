@@ -1,6 +1,5 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideToastr } from 'ngx-toastr';
@@ -24,15 +23,29 @@ import { AppComponent } from './app/app.component';
 import Aura from '@primeng/themes/aura';
 
 bootstrapApplication(AppComponent, {
-    providers: [
-        importProvidersFrom(BrowserModule, AppRoutingModule, RouterModule, DataViewModule, ButtonModule, ImageModule, TagModule, CommonModule, ReactiveFormsModule, SelectButtonModule, StoreModule.forRoot(appReducer), StoreDevtoolsModule.instrument({ logOnly: !isDevMode() })),
-        provideHttpClient(), provideAnimationsAsync(), provideToastr(),
-        providePrimeNG({
-            theme: {
-                preset: Aura
-            }
-        }),
-        provideAnimations()
-    ]
-})
-  .catch(err => console.error(err));
+  providers: [
+    importProvidersFrom(
+      BrowserModule,
+      AppRoutingModule,
+      RouterModule,
+      DataViewModule,
+      ButtonModule,
+      ImageModule,
+      TagModule,
+      CommonModule,
+      ReactiveFormsModule,
+      SelectButtonModule,
+      StoreModule.forRoot(appReducer),
+      StoreDevtoolsModule.instrument({ logOnly: !isDevMode() }),
+    ),
+    provideHttpClient(),
+    provideAnimationsAsync(),
+    provideToastr(),
+    providePrimeNG({
+      theme: {
+        preset: Aura,
+      },
+    }),
+    provideAnimations(),
+  ],
+}).catch((err) => console.error(err));
