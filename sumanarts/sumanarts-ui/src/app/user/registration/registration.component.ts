@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, formatDate } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -10,7 +10,7 @@ import {
 import { FirstKeyPipe } from '../../shared/services/pipes/first-key.pipe';
 import { AuthService } from '../../shared/services/auth.service';
 import { ToastrService } from 'ngx-toastr';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -19,13 +19,26 @@ import { RouterLink } from '@angular/router';
   templateUrl: './registration.component.html',
   styles: ``,
 })
-export class RegistrationComponent {
+export class RegistrationComponent implements OnInit {
   constructor(
     public formBuilder: FormBuilder,
     private service: AuthService,
     private toastr: ToastrService,
+    private router: Router,
   ) {}
   isSubmitted: boolean = false;
+  genderOptions: any[] = [
+    { label: 'Male', value: 'Male' },
+    { label: 'Female', value: 'Female' },
+  ];
+  roleOptions: any[] = [
+    { label: 'Admin', value: 'Admin' },
+    { label: 'Artist', value: 'Artist' },
+    { label: 'User', value: 'User' },
+  ];
+  ngOnInit(): void {
+    if (this.service.isLoggedIn()) this.router.navigateByUrl('/dashboard');
+  }
 
   passwordMatchValidator: ValidatorFn = (control: AbstractControl): null => {
     const password = control.get('password');
@@ -42,6 +55,10 @@ export class RegistrationComponent {
     {
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      gender: ['', Validators.required],
+      role: ['', Validators.required],
+      dobRaw: ['', Validators.required],
+      artistId: [''],
       password: [
         '',
         [
@@ -56,9 +73,20 @@ export class RegistrationComponent {
   );
 
   onSubmit() {
+    const rawFormValues = this.form.value;
     this.isSubmitted = true;
     if (this.form.valid) {
-      this.service.createUser(this.form.value).subscribe({
+      // Suman formating date before sending to backend, since backend expects date in 'yyyy-MM-dd' format
+      const formattedDate = formatDate(
+        rawFormValues.dobRaw,
+        'yyyy-MM-dd',
+        'en-US',
+      );
+      const payload = {
+        ...rawFormValues,
+        dob: formattedDate,
+      };
+      this.service.createUser(payload).subscribe({
         next: (res: any) => {
           if (res.succeeded) {
             this.form.reset();

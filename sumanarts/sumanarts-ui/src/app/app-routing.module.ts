@@ -11,7 +11,12 @@ import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { LoginComponent } from './user/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-// import { RegistrationComponent } from './user/registration/registration.component';
+import { authGuard } from './shared/auth.guard';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
+
+import { AdminOnlyComponent } from './AuthorizedPages/admin-only/admin-only.component';
+import { claimReq } from './shared/utils/claimReq-utils';
 
 export const routes: Routes = [
   {
@@ -19,8 +24,7 @@ export const routes: Routes = [
     redirectTo: '/login',
     pathMatch: 'full',
   },
-  { path: 'home', component: HomeComponent, title: 'Home - Artworks' },
-  { path: 'listart', component: ArtworksListComponent, title: 'List Artworks' },
+
   {
     path: '',
     component: UserComponent,
@@ -36,12 +40,71 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: 'dashboard', component: DashboardComponent, title: 'dashboard' },
-  { path: 'addmedium', component: AddMediumComponent, title: 'Add Medium' },
-  { path: 'addart', component: ArtworkAddComponent },
-  { path: 'counter', component: CounterComponent, title: 'Counter page' },
-  { path: 'posts', component: PostsListComponent, title: 'Posts page' },
-  { path: 'cart', component: CartComponent, title: 'Cart' },
+  // {
+  //   path: 'dashboard',
+  //   component: DashboardComponent,
+  //   title: 'dashboard',
+  //   // canActivate: [authGuard],
+  // },
+  // { path: 'addmedium', component: AddMediumComponent, title: 'Add Medium' },
+  // { path: 'addart', component: ArtworkAddComponent },
+
+  {
+    path: '',
+    component: MainLayoutComponent,
+    canActivate: [authGuard],
+    canActivateChild: [authGuard],
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+      },
+      {
+        path: 'admin-only',
+        component: AdminOnlyComponent,
+        data: { claimReq: claimReq.adminOnly },
+      },
+      {
+        path: 'addmedium',
+        component: AddMediumComponent,
+        data: { claimReq: claimReq.adminOrArtist },
+      },
+      {
+        path: 'addart',
+        component: ArtworkAddComponent,
+        data: { claimReq: claimReq.adminOrArtist },
+      },
+      { path: 'home', component: HomeComponent, title: 'Home - Artworks' },
+      {
+        path: 'listart',
+        component: ArtworksListComponent,
+        title: 'List Artworks',
+      },
+      { path: 'counter', component: CounterComponent, title: 'Counter page' },
+      { path: 'posts', component: PostsListComponent, title: 'Posts page' },
+      { path: 'cart', component: CartComponent, title: 'Cart' },
+
+      // {
+      //   path: 'apply-for-maternity-leave',
+      //   component: ApplyForMaternityLeaveComponent,
+      //   data: { claimReq: claimReq.femaleAndTeacher },
+      // },
+      // {
+      //   path: 'library-members-only',
+      //   component: LibraryMembersOnlyComponent,
+      //   data: { claimReq: claimReq.hasLibraryId },
+      // },
+      // {
+      //   path: 'under-10-and-female',
+      //   component: Under10AndFemaleComponent,
+      //   data: { claimReq: claimReq.femaleAndBelow10 },
+      // },
+      {
+        path: 'forbidden',
+        component: ForbiddenComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({

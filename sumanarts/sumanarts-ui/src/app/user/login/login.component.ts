@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -11,6 +11,7 @@ import {
   transition,
   query,
 } from '@angular/animations';
+import { TOKEN_KEY } from 'src/costant';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -32,13 +33,19 @@ import {
     ]),
   ],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   constructor(
     public formBuilder: FormBuilder,
     private authService: AuthService,
     private router: Router,
     private toastr: ToastrService,
   ) {}
+  ngOnInit(): void {
+    if (this.authService.isLoggedIn()) {
+      console.log(this.authService.isLoggedIn());
+      this.router.navigateByUrl('/dashboard');
+    }
+  }
 
   isSubmitted: boolean = false;
 
@@ -52,7 +59,8 @@ export class LoginComponent {
     if (this.form.valid) {
       this.authService.signIn(this.form.value).subscribe({
         next: (res: any) => {
-          localStorage.setItem('token', res.token);
+          this.authService.saveToken(res.token);
+          //localStorage.setItem(TOKEN_KEY, res.token);
           this.router.navigateByUrl('/dashboard');
         },
         error: (err) => {

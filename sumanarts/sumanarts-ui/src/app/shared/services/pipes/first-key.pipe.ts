@@ -2,15 +2,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'firstKey',
-  standalone: true
+  standalone: true,
 })
+// pipe for validation
 export class FirstKeyPipe implements PipeTransform {
-
   transform(value: any): string | null {
     const keys = Object.keys(value);
-    if (keys && keys.length > 0)
-      return keys[0];
+    if (keys && keys.length > 0) return keys[0];
     return null;
   }
-
 }

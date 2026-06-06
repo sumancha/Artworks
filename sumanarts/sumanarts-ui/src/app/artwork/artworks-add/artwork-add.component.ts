@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
- 
+
 import { Status } from '../../../models/status';
 import { ImageManipulationService } from '../../shared/services/image-manipulation.service';
 import { ArtImage, Medium } from '../../../models/artImage';
@@ -7,91 +7,102 @@ import { AddArtImage } from '../../../models/addArtImage';
 import { Router } from '@angular/router';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { MediumService } from '../../shared/services/medium.service';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { restrictedWordsValidator } from '../../Validator/restricted-words-validator';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+// import { restrictedWordsValidator } from '../../shared/Validator/restricted-words-validator';
 import { NgFor } from '@angular/common';
 @Component({
-    selector: 'art-artwork-add',
-    templateUrl: './artwork-add.component.html',
-    styleUrl: './artwork-add.component.css',
-    imports: [ReactiveFormsModule, NgFor],
+  selector: 'art-artwork-add',
+  templateUrl: './artwork-add.component.html',
+  styleUrl: './artwork-add.component.css',
+  imports: [ReactiveFormsModule, NgFor],
 })
 export class ArtworkAddComponent {
   addArtFormgrp!: FormGroup;
-  imageFile?:File;
-status!:Status;
- mediums: Medium[] | undefined;
+  imageFile?: File;
+  status!: Status;
+  mediums: Medium[] | undefined;
 
-    stateOptions: any[] = [
-        { label: 'sold', value: true },
-        { label: 'Available', value: false }
-    ];
-/**
- *
- */
-constructor(private imageService: ImageManipulationService, private router:Router, private mediumService:MediumService) {
- }
+  stateOptions: any[] = [
+    { label: 'sold', value: true },
+    { label: 'Available', value: false },
+  ];
+  /**
+   *
+   */
+  constructor(
+    private imageService: ImageManipulationService,
+    private router: Router,
+    private mediumService: MediumService,
+  ) {}
 
-ngOnInit(){
-  // const addArtForm = new FormGroup({
-    this.addArtFormgrp  = new FormGroup({
-       title : new FormControl('',Validators.required),
-         artDatails : new FormControl('',[Validators.required, Validators.maxLength(500)]),
-            createdDate : new FormControl(),
-           mediumId : new FormControl(),
-             sold : new FormControl('',Validators.required),
-               soldDate : new FormControl(), 
-                price : new FormControl('',Validators.required),
-                imageFile: new  FormControl()    
-
+  ngOnInit() {
+    // const addArtForm = new FormGroup({
+    this.addArtFormgrp = new FormGroup({
+      title: new FormControl('', Validators.required),
+      artDatails: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(500),
+      ]),
+      createdDate: new FormControl(),
+      mediumId: new FormControl(),
+      sold: new FormControl('', Validators.required),
+      soldDate: new FormControl(),
+      price: new FormControl('', Validators.required),
+      imageFile: new FormControl(),
     });
-      this.mediumService.getAllMediums().subscribe({
-        next:(data:Medium[]) => {
-         console.log("Medium",data);
-            this.mediums = data;
-        },
-        error:(err:any)=> {console.log(err);}});
+    this.mediumService.getAllMediums().subscribe({
+      next: (data: Medium[]) => {
+        console.log('Medium', data);
+        this.mediums = data;
+      },
+      error: (err: any) => {
+        console.log(err);
+      },
+    });
+  }
+  get title() {
+    return this.addArtFormgrp.get('title');
+  }
+  get artDatails() {
+    return this.addArtFormgrp.get('artDatails');
+  }
+  get sold() {
+    return this.addArtFormgrp.get('sold');
+  }
+  get price() {
+    return this.addArtFormgrp.get('price');
+  }
 
-}
-get title(){ 
-  return this.addArtFormgrp.get('title'); }
-get artDatails(){ return this.addArtFormgrp.get('artDatails'); }
-get sold(){ return this.addArtFormgrp.get('sold'); }
-get price(){ return this.addArtFormgrp.get('price'); }
+  onChange(event: any) {
+    this.imageFile = event.target.files[0];
+  }
 
-   onChange(event:any){
-     this.imageFile=event.target.files[0];
-    }
+  saveArtWork(event: any) {
+    console.log(this.addArtFormgrp.value);
+    this.status = { statusCode: 0, message: 'wait..' };
 
+    const frmData: AddArtImage = Object.assign(this.addArtFormgrp.value);
+    //       const eventMedium= this.addArtFormgrp.get('medium')?.value;
+    // frmData.mediumId= event.mediumId;
 
-saveArtWork(event:any){
-  console.log(this.addArtFormgrp.value);
-     this.status= {statusCode:0,message:'wait..'};
- 
-      const frmData :AddArtImage = Object.assign(this.addArtFormgrp.value);
-//       const eventMedium= this.addArtFormgrp.get('medium')?.value; 
-// frmData.mediumId= event.mediumId;
-
-
-      frmData.imageFile=this.imageFile;
-      // we will call our service, and pass this object to it
-      this.imageService.AddArt(frmData).subscribe({
-        next:(data:any)=>{
-            this.status= {statusCode:1,message:'Medium Added Successfully'};
-      console.log("Medium Added",data);
-      console.log("Medium Added",data);
-      this.router.navigate(['/listart']);
-          
-        },
-        error: (err: any)=>{
-         this.status= {statusCode:0,message:'Error on server side'}
-          console.log(err);
-        }
-      }
-    )
-
-
-}
-
-
+    frmData.imageFile = this.imageFile;
+    // we will call our service, and pass this object to it
+    this.imageService.AddArt(frmData).subscribe({
+      next: (data: any) => {
+        this.status = { statusCode: 1, message: 'Medium Added Successfully' };
+        console.log('Medium Added', data);
+        console.log('Medium Added', data);
+        this.router.navigate(['/listart']);
+      },
+      error: (err: any) => {
+        this.status = { statusCode: 0, message: 'Error on server side' };
+        console.log(err);
+      },
+    });
+  }
 }
