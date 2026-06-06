@@ -59,11 +59,7 @@ builder.Services.AddScoped<IFileService, FileService>();
 //        });
 //});
 
-//builder.Services.AddIdentity<IdentityUser , IdentityRole  >()
-//    //.AddRoles<IdentityRole>()
-//    //.AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("ArtImage")
-//    .AddEntityFrameworkStores<ArtAuthDbContext>()
-//    .AddDefaultTokenProviders();
+
 
 builder.Services.Configure<IdentityOptions>(options =>
 {

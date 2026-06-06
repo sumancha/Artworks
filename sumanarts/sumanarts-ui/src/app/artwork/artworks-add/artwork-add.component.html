@@ -1,4 +1,4 @@
-<div class="container">
+<div class="content">
   <h1 class="header">
     Add Artwork details
   </h1>
@@ -14,7 +14,8 @@
         @if( artDatails?.errors?.['required'] && artDatails?.invalid && sold?.touched ){<em> Please enter Details</em>}
  <!-- <label for="mediumId" class="form-control" class="form-label">Medium</label> -->
         <div class="dropdown">
-        <select style="width: 500px;" class="form-control bg-body-secondary" formControlName="mediumId" >
+        <!-- <select style="width: 500px;" class="form-control bg-body-secondary" formControlName="mediumId" > -->
+          <select  class="form-control bg-body-secondary" formControlName="mediumId" >
           <option value="null" disabled selected >Select a Medium</option>
           <option *ngFor="let medium of mediums" [value]="medium.id">{{medium.mediumType}}</option>
         </select>

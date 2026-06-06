@@ -1,4 +1,11 @@
-<div class="mb-4">
+<div class="container">
+
+    <div class="d-flex justify-content-center align-items-center">
+    <!-- <a routerLink="/user" routerLinkActive="active">Register</a> -->
+   <img class="logo" src="logo.jpg" 
+   alt="Logo" />
+  </div>
+  <div class="mb-4">
  <h2 class="text-success">Sign up</h2> 
  <div>Already have an  Account
     <a routerLink="/login" class="text-decoration-none fw-medium text-sucess d-inline-block">Sign in</a>
@@ -6,13 +13,13 @@
 </div>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="mb-3">
-    <input class="form-control bg-body-secondary" placeholder="Full Name" formControlName="fullName">
+    <input class="form-control bg-body-secondary" placeholder="Full Name" formControlName="fullName"/>
     <div class="error-feedback" *ngIf="hasDisplayableError('fullName') && form.controls.fullName.hasError('required')">
       Please enter your full name.
     </div>
   </div>
   <div class="mb-3">
-    <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email">
+    <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email"/>
     <div class="error-feedback" *ngIf="hasDisplayableError('email')">
       <div *ngIf="form.controls.email.hasError('required')">
         Please enter your email address.
@@ -23,7 +30,7 @@
     </div>
   </div>
   <div class="mb-3">
-    <input class="form-control bg-body-secondary" type="password" placeholder="Password" formControlName="password">
+    <input class="form-control bg-body-secondary" placeholder="Password" formControlName="password"/>
     <div class="error-feedback" *ngIf="hasDisplayableError('password')">
       <ng-container [ngSwitch]="form.controls.password.errors | firstKey">
         <div *ngSwitchCase="'required'">
@@ -40,15 +47,42 @@
     </div>
   </div>
   <div class="mb-3">
-    <input class="form-control bg-body-secondary" placeholder="Confirm Password" type="password" formControlName="confirmPassword">
+    <input class="form-control bg-body-secondary" placeholder="Confirm Password" formControlName="confirmPassword" />
     <div class="error-feedback" 
     *ngIf="hasDisplayableError('confirmPassword') && form.controls.confirmPassword.hasError('passwordMismatch')">
       Passwords doesn't match.
     </div>
   </div>
+    <div class="mb-3">
+     <div class="dropdown">
+        <select  class="form-control bg-body-secondary" formControlName="gender" >
+          <option value="" disabled selected >Select your Gender</option>
+          <option *ngFor="let each of genderOptions" [value]="each.value">{{each.label}}</option>
+        </select>
+      </div>
+      </div>
+   <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Artist ID" formControlName="artistId"/>
+      
+    </div>
+  
+   <div class="mb-3">
+     <div class="dropdown">
+        <select  class="form-control bg-body-secondary" formControlName="role" >
+          <option value="null" disabled selected >Select your role</option>
+          <option *ngFor="let each of roleOptions" [value]="each.value">{{each.label}}</option>
+        </select>
+  </div>
+        </div>
+                 <label for="dobRaw" class="form-label">Date of Birth</label>
+         
+        <input formControlName="dobRaw" class="form-control  bg-body-secondary"  type="date" placeholder="Date of Birth" />
+
+
   <div class="mt-4">
     <button type="submit" class="btn btn-success w-100 rounded-3">
       Register
     </button>
   </div>
 </form>
+</div>
