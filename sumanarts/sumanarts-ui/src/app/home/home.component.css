@@ -1,0 +1,28 @@
+.carasouel-wrapper{
+    max-height: 900px;
+    max-width: 1400px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: flex;
+    justify-content: center;
+    /* overflow: hidden;
+    position: relative; */
+    .caption{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        padding: 10px;
+        border-radius: 5px;
+    }
+    /* left: 200px; */
+}
+/* .container {
+    background-color: #a1a1a1;
+}
+
+:host {
+  display: block; 
+  background-color: #3498db;
+} */

@@ -2,10 +2,10 @@
 
    
     <!-- <a routerLink="/user" routerLinkActive="active">Register</a> -->
-   <img class="logo" src="logo.jpg" 
+   <img class="logo" src="logo.jpg" style="position: relative; z-index: 2;"
    alt="Logo" />
-   
-  <div class="right ">
+
+  <div class="right " style="position: relative; top: 30px;">
      <nav class="navbar bg-body-tertiary ">
      <!-- assets/images/logo.png" alt="Logo" /> -->
     <a class="nav-link fw-bold" routerLink="/home" routerLinkActive="active">Home</a>
@@ -17,7 +17,8 @@
     <div class="cart">
       <a class="nav-link fw-bold" routerLink="/cart" routerLinkActive="active">Cart({{ cartItemCount$ |async}})</a>
     </div>
-  </nav>
+  </nav> 
+  
     <button class="btn btn-danger ms-5" (click)="onLogout()">Logout</button>
   <!-- </div>
   <div class="right" *ngIf="!user">
@@ -34,15 +35,21 @@
   </div> 
 
 </div>
-<div class="searchContainer">
+<div class="searchContainer" style="position: relative; top: -100px; left: -350px;">
   <nav class="navbar bg-body-tertiary ">
             <!-- <ul class="nav flex-column w-100 px-3">
     <li class="nav-item" [appHideIfClaimsNotMet]="claimReq.adminOnly">
       <a class="nav-link" routerLink="/admin-only">Admin Only</a>
     </li></ul> -->
  <!-- search bar and logout button  -->
-    <div class="container-fluid d-flex justify-content-end">  
-
+    <div class="container-fluid d-flex justify-content-end" >  
+   <div class="left" >
+ 
+    <div class="user-info">
+     User: <strong>{{fullName}} </strong>
+      Role: <strong>{{userRole}} </strong>
+    </div>
+    </div>
       <form class="d-flex me-5" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>

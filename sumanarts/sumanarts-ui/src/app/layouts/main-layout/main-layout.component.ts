@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
-import { claimReq } from 'src/app/shared/utils/claimReq-utils';
+// import { claimReq } from 'src/app/shared/utils/claimReq-utils';
 import { HideIfClaimsNotMetDirective } from 'src/app/directives/hide-if-claims-not-met.directive';
 import { NavbarComponent } from '../nav/navbar/navbar.component';
 

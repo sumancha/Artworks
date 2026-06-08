@@ -21,7 +21,7 @@ export class ImageManipulationService {
   constructor(private http: HttpClient) {}
 
   getAllArtDetails(): Observable<ArtImage[]> {
-    var abc = this.http.get<ArtImage[]>(this.artDetailsURL + '/api/ArtImage');
+    var abc = this.http.get<ArtImage[]>(this.artDetailsURL + '/api/Arts');
     console.log(abc);
     return abc;
   }
@@ -65,7 +65,7 @@ export class ImageManipulationService {
     // newData.mediumId = data.medium;
     console.log('newData', formData);
     var abc = this.http.post<any>(
-      this.artDetailsURL + '/api/ArtImage',
+      this.artDetailsURL + '/api/Arts',
       formData,
       httpOptions,
     );

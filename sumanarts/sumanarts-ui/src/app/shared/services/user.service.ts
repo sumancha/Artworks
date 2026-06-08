@@ -21,4 +21,13 @@ export class UserService {
       headers: reqHeader,
     });
   }
+
+  getImagefiles() {
+    const reqHeader = new HttpHeaders({
+      Authorization: 'Bearer ' + this.authService.getToken(),
+    });
+    return this.http.get(environment.authUrl + '/fileNames', {
+      headers: reqHeader,
+    });
+  }
 }

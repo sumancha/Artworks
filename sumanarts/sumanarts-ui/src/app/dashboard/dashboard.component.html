@@ -1,8 +1,21 @@
-
+<div class="content">
 <div class="text-center">
 <!-- <button class="btn btn-dark" (click)="onLogOut()">Logout</button> -->
-<h1 class="display-6">Welcome </h1>
-<h1 class="display-6 fw-bolder text-darker">{{fullName}} </h1>
+<h4 class="display-7">Welcome </h4>
+<h4 class="display-7 fw-bolder text-darker">{{fullName}} </h4>
+
+   <div class="adminPhotoImport" [appHideIfClaimsNotMet]="claimReq.adminOnly">
+<p class="display-7 fw-bolder text-darker">Admin Only Section : upload Import</p>
+        <form [formGroup]="adminPhotoImportFormgrp" (ngSubmit)="saveImage($event)">
+            <div class="mb-3">
+               <input formGroupName="imageInput" class="form-control bg-body-secondary" type="file" (change)="onChange($event)" >
+      </div>
+      <button type="submit" class="btn btn-primary"  >upload Image</button>
+        </form>
+
+
+    </div>
   <!-- <button [appHideIfClaimsNotMet]="claimReq.adminOnly" class="btn btn-danger">Some Admin Operation</button> -->
 </div>
 
+</div>

@@ -2,9 +2,25 @@
    
 
 <div class="container">
-<div class="row">
-    <div class="col-md-12">
-        <p>home works!</p>
-    </div>
+
+ 
+    
+<div class="carasouel-wrapper">
+    
+@if (images) {
+	<ngb-carousel [interval]="2000" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+		@for (image of images; track image) {
+			<ng-template ngbSlide>
+				<div class="picsum-img-wrapper">
+					<img [src]="image" alt="Random slide" />
+				</div>
+				<div class="carousel-caption">
+					 <!-- <h3>No mouse navigation</h3> -->
+					<p>sumanarts ©</p> 
+				</div>
+			</ng-template>
+		}
+	</ngb-carousel>
+}
 </div>
 </div>
